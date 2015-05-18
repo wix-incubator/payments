@@ -1,0 +1,12 @@
+{
+    "com.pelecard" :
+    {
+        "name" : "פלאכארד",
+        "form" :
+        {
+            "terminalNumber" : "מספר טרמינל",
+            "user"           : "שם משתמש",
+            "password"       : "סיסמא"
+        }
+    }
+}

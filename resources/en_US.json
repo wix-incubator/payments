@@ -1,0 +1,25 @@
+{
+    "com.braintreegateway" : 
+    {
+        "name" : "Braintree",
+        "form" : 
+        {
+            "merchantId"        : "Merchant ID",
+            "publicKey"         : "Public Key",
+            "privateKey"        : "Private Key",
+            "currency"          : "Currency",
+            "merchantAccountId" : "Merchant Account ID"
+        }
+    },
+    
+    "com.pelecard" :
+    {
+        "name" : "Pelecard",
+        "form" :
+        {
+            "terminalNumber" : "Terminal Number",
+            "user"           : "User",
+            "password"       : "Password"
+        }
+    }
+}
