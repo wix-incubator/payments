@@ -1,5 +1,5 @@
 var expect   = require('chai').expect;
-var _        = require("underscore");
+var _        = require("lodash");
 var adapters = require("../src/adapters.js");
 
 /***** Mock objects for testing the adapter *****/

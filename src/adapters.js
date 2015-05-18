@@ -1,4 +1,4 @@
-var _ = require("underscore");
+var _ = require("lodash");
 
 // The simple functions are outside of the exports because they can't be referenced from within
 // Looking at you, Braintree....
