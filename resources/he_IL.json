@@ -1,12 +1,22 @@
 {
-    "com.pelecard" :
-    {
-        "name" : "פלאכארד",
-        "form" :
-        {
-            "terminalNumber" : "מספר טרמינל",
-            "user"           : "שם משתמש",
-            "password"       : "סיסמא"
-        }
-    }
+	"methods" :
+	{
+		"cash" : "מזומן",
+		"credit" : "כרטיסי אשראי",
+		"com.cellarix" : "סלאריקס"
+	},
+	
+	"gateways" :
+	{
+		"com.pelecard" :
+		{
+			"name" : "פלאקארד",
+			"form" :
+			{
+				"terminalNumber" : "מספר טרמינל",
+				"user"           : "שם משתמש",
+				"password"       : "סיסמא"
+			}
+		}
+	}
 }

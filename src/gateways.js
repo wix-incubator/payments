@@ -33,7 +33,7 @@ module.exports = {
 
 	getGatewayDisplayName : function(locale, gatewayId) {
 		if (_.has(locales, locale)) {
-			var gw = locales[locale][gatewayId];
+			var gw = locales[locale].gateways[gatewayId];
 			if (gw) {
 				return gw.name;
 			}
@@ -43,7 +43,7 @@ module.exports = {
 
 	getGatewayFieldDisplayName : function(locale, gatewayId, field) {
 		if (_.has(locales, locale)) {
-			var gw = locales[locale][gatewayId];
+			var gw = locales[locale].gateways[gatewayId];
 			if (gw) {
 				return gw.form[field];
 			}
