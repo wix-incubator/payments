@@ -1,14 +1,24 @@
 var _ = require("underscore");
 
 // Gateways
-var rawGateways = [
-    require("./gateways/com.pelecard"),
+var gatewaysList = [
+    require("./gateways/au.com.fatzebra"),
     require("./gateways/com.braintreegateway"),
+    require("./gateways/com.ewaypayments"),
+    require("./gateways/com.mercurypay"),
+    require("./gateways/com.paybox"),
+    require("./gateways/com.paymentexpress"),
+    require("./gateways/com.paypal"),
+    require("./gateways/com.pelecard"),
+    require("./gateways/com.stripe"),
+    require("./gateways/com.tranzila"),
+    require("./gateways/com.worldpay"),
+    require("./gateways/net.authorize"),
 ]
 
 
 var locales  = require("./locales");
-var gateways = _.reduce(rawGateways, function(gateways, gateway) {gateways[gateway.id] = gateway; return gateways}, {});
+var gateways = _.reduce(gatewaysList, function(gateways, gateway) {gateways[gateway.id] = gateway; return gateways}, {});
 
 
 module.exports = {
