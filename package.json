@@ -1,6 +1,6 @@
 {
   "name": "localized-payment-gateways",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An I18N-friendly mapping between countries and payment gateways",
   "main": "index.js",
   "scripts": {
