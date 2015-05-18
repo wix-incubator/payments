@@ -4,26 +4,10 @@ var gateways  = require("../src/gateways.js");
 var adapters  = require("../src/adapters.js");
 
 
-/******** Mock objects ***********/
-// Israel
-var israelObject = [
-    {
-        id : "com.pelecard",
-        form : [
-            {type : "string", name : "terminalNumber"},
-            {type : "string", name : "user"},
-            {type : "string", name : "password"},
-        ],
-        formValuesToMerchant : adapters.simpleFormValuesToMerchant,
-        merchantToFormValues : adapters.simpleMerchantToFormValues,
-        keyToMerchant        : JSON.parse,
-        merchantToKey        : JSON.stringify
-    }
-];
-
 describe("Getting gateway by country tests", function() {
     it ('returns the expected object when fetching Israel', function() {
-        expect(gateways.getGatewaysForCountry("IL")).to.deep.equal(israelObject);
+		var israeliGateways = gateways.getGatewaysForCountry("IL");
+		expect(israeliGateways).to.have.length.of(2);
     });
 });
 
