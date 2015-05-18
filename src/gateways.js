@@ -1,12 +1,14 @@
-var _        = require("underscore");
+var _ = require("underscore");
+
+// Gateways
+var rawGateways = [
+    require("./gateways/com.pelecard"),
+    require("./gateways/com.braintreegateway"),
+]
+
+
 var locales  = require("./locales");
-
-
-var gateways = {
-	"com.pelecard"         : require("./gateways/com.pelecard"),
-	"com.braintreegateway" : require("./gateways/com.braintreegateway"),
-};
-
+var gateways = _.reduce(rawGateways, function(gateways, gateway) {gateways[gateway.id] = gateway; return gateways}, {});
 
 
 module.exports = {
