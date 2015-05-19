@@ -1,13 +1,5 @@
 {
     "gateways": {
-        "com.pelecard": {
-            "form": {
-                "terminalNumber": "Terminal Number",
-                "user": "User",
-                "password": "Password"
-            },
-            "name": "Pelecard"
-        },
         "com.braintreegateway": {
             "form": {
                 "merchantId": "Merchant ID",
@@ -17,11 +9,19 @@
                 "merchantAccountId": "Merchant Account ID"
             },
             "name": "Braintree"
+        },
+        "com.pelecard": {
+            "form": {
+                "terminalNumber": "Terminal Number",
+                "user": "User",
+                "password": "Password"
+            },
+            "name": "Pelecard"
         }
     },
     "methods": {
         "cash": "Cash",
-        "credit": "Credit Cards",
-        "com.cellarix": "Cellarix"
+        "com.cellarix": "Cellarix",
+        "credit": "Credit Cards"
     }
 }
