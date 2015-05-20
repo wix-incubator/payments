@@ -41,7 +41,7 @@ Q().then(function() {
             tokens[locale] = tokens[locale] || {};
 
             var data = fs.readFileSync(file, 'utf8');
-            var json = JSON.parse(data.toString('utf8').replace(/^\uFEFF/, ''));
+            var json = JSON.parse(data.toString('utf8'));
 
             _.each(json, function(val, key) {
                 var parts = key.split("_");

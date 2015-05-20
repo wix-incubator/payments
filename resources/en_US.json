@@ -1,19 +1,5 @@
 {
     "gateways": {
-        "au.com.fatzebra": {
-            "form": {
-                "username": "Username",
-                "password": "Password"
-            },
-            "name": "Fat Zebra"
-        },
-        "com.ewaypayments": {
-            "form": {
-                "customerId": "Customer ID",
-                "refundPwd": "Refund Password"
-            },
-            "name": "eWAY"
-        },
         "com.braintreegateway": {
             "form": {
                 "merchantId": "Merchant ID",
@@ -24,6 +10,20 @@
             },
             "name": "Braintree"
         },
+        "com.ewaypayments": {
+            "form": {
+                "customerId": "Customer ID",
+                "refundPwd": "Refund Password"
+            },
+            "name": "eWAY"
+        },
+        "com.mercurypay": {
+            "form": {
+                "merchantId": "Merchant ID",
+                "password": "Password"
+            },
+            "name": "Mercury"
+        },
         "com.paybox": {
             "form": {
                 "site": "Site Number",
@@ -32,12 +32,12 @@
             },
             "name": "PayBox"
         },
-        "com.mercurypay": {
+        "au.com.fatzebra": {
             "form": {
-                "merchantId": "Merchant ID",
+                "username": "Username",
                 "password": "Password"
             },
-            "name": "Mercury"
+            "name": "Fat Zebra"
         },
         "com.paymentexpress": {
             "form": {
@@ -54,13 +54,6 @@
             },
             "name": "Pelecard"
         },
-        "com.paypal": {
-            "form": {
-                "clientId": "Client ID",
-                "secret": "Secret"
-            },
-            "name": "PayPal"
-        },
         "com.stripe": {
             "form": {
                 "apiKey": "API Key"
@@ -72,6 +65,13 @@
                 "username": "Username"
             },
             "name": "Tranzila"
+        },
+        "com.paypal": {
+            "form": {
+                "clientId": "Client ID",
+                "secret": "Secret"
+            },
+            "name": "PayPal"
         },
         "net.authorize": {
             "form": {

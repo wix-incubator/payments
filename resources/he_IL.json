@@ -2,43 +2,43 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "�����",
-                "password": "�����"
+                "username": "משתמש",
+                "password": "סיסמא"
             },
-            "name": "��� ����"
+            "name": "פאט זברה"
         },
         "com.pelecard": {
             "form": {
-                "terminalNumber": "����",
-                "user": "�����",
-                "password": "�����"
+                "terminalNumber": "מסוף",
+                "user": "משתמש",
+                "password": "סיסמא"
             },
-            "name": "�������"
-        },
-        "com.paypal": {
-            "form": {
-                "clientId": "���� ����",
-                "secret": "���"
-            },
-            "name": "������"
+            "name": "פלאקארד"
         },
         "com.tranzila": {
             "form": {
-                "username": "�����"
+                "username": "משתמש"
             },
-            "name": "�������"
+            "name": "טרנזילה"
+        },
+        "com.paypal": {
+            "form": {
+                "clientId": "מזהה לקוח",
+                "secret": "סוד"
+            },
+            "name": "פייפאל"
         },
         "net.authorize": {
             "form": {
                 "login": "Login ID",
                 "transactionKey": "Transaction Key"
             },
-            "name": "��������.��"
+            "name": "אוטורייז.נט"
         }
     },
     "methods": {
-        "cash": "�����",
-        "credit": "������ �����",
-        "com.cellarix": "�������"
+        "cash": "מזומן",
+        "credit": "כרטיסי אשראי",
+        "com.cellarix": "סלאריקס"
     }
 }
