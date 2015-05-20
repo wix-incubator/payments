@@ -1,22 +1,44 @@
 {
-	"methods" :
-	{
-		"cash" : "מזומן",
-		"credit" : "כרטיסי אשראי",
-		"com.cellarix" : "סלאריקס"
-	},
-	
-	"gateways" :
-	{
-		"com.pelecard" :
-		{
-			"name" : "פלאקארד",
-			"form" :
-			{
-				"terminalNumber" : "מספר טרמינל",
-				"user"           : "שם משתמש",
-				"password"       : "סיסמא"
-			}
-		}
-	}
+    "gateways": {
+        "au.com.fatzebra": {
+            "form": {
+                "username": "�����",
+                "password": "�����"
+            },
+            "name": "��� ����"
+        },
+        "com.paypal": {
+            "form": {
+                "clientId": "���� ����",
+                "secret": "���"
+            },
+            "name": "������"
+        },
+        "com.pelecard": {
+            "form": {
+                "terminalNumber": "����",
+                "user": "�����",
+                "password": "�����"
+            },
+            "name": "�������"
+        },
+        "com.tranzila": {
+            "form": {
+                "username": "�����"
+            },
+            "name": "�������"
+        },
+        "net.authorize": {
+            "form": {
+                "login": "Login ID",
+                "transactionKey": "Transaction Key"
+            },
+            "name": "��������.��"
+        }
+    },
+    "methods": {
+        "cash": "�����",
+        "com.cellarix": "�������",
+        "credit": "������ �����"
+    }
 }

@@ -1,5 +1,12 @@
 {
     "gateways": {
+        "au.com.fatzebra": {
+            "form": {
+                "username": "Username",
+                "password": "Password"
+            },
+            "name": "Fat Zebra"
+        },
         "com.braintreegateway": {
             "form": {
                 "merchantId": "Merchant ID",
@@ -10,6 +17,42 @@
             },
             "name": "Braintree"
         },
+        "com.ewaypayments": {
+            "form": {
+                "customerId": "Customer ID",
+                "refundPwd": "Refund Password"
+            },
+            "name": "eWAY"
+        },
+        "com.mercurypay": {
+            "form": {
+                "merchantId": "Merchant ID",
+                "password": "Password"
+            },
+            "name": "Mercury"
+        },
+        "com.paybox": {
+            "form": {
+                "site": "Site Number",
+                "rang": "Bank Number",
+                "cle": "Password"
+            },
+            "name": "PayBox"
+        },
+        "com.paymentexpress": {
+            "form": {
+                "username": "Username",
+                "password": "Password"
+            },
+            "name": "Payment Express"
+        },
+        "com.paypal": {
+            "form": {
+                "clientId": "Client ID",
+                "secret": "Secret"
+            },
+            "name": "PayPal"
+        },
         "com.pelecard": {
             "form": {
                 "terminalNumber": "Terminal Number",
@@ -17,6 +60,32 @@
                 "password": "Password"
             },
             "name": "Pelecard"
+        },
+        "com.stripe": {
+            "form": {
+                "apiKey": "API Key"
+            },
+            "name": "Stripe"
+        },
+        "com.tranzila": {
+            "form": {
+                "username": "Username"
+            },
+            "name": "Tranzila"
+        },
+        "com.worldpay": {
+            "form": {
+                "merchantCode": "Merchant Code",
+                "merchantPassword": "Merchant Password"
+            },
+            "name": "WorldPay"
+        },
+        "net.authorize": {
+            "form": {
+                "login": "Login ID",
+                "transactionKey": "Transaction Key"
+            },
+            "name": "Authorize.Net"
         }
     },
     "methods": {

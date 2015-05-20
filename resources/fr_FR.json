@@ -1,0 +1,12 @@
+{
+    "gateways": {
+        "com.paybox": {
+            "form": {
+                "site": "Numéro de site",
+                "rang": "Numéro de rang",
+                "cle": "Clé secrète"
+            },
+            "name": "PayBox"
+        }
+    }
+}
