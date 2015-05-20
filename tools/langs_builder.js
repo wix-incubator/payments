@@ -79,7 +79,7 @@ Q().then(function() {
     return tokens;
 }).then(function(tokens) {
     _.each(tokens, function(token, locale) {
-        fs.writeFileSync(path.join(__dirname, "..", "resources", locale.replace("-", "_") + ".json"), JSON.stringify(token, null, 4));
+        fs.writeFileSync(path.join(__dirname, "..", "resources", locale.replace("-", "_") + ".json"), JSON.stringify(token, null, 4), 'utf8');
     });
 }).then(function() {
     console.log(" - Success.")

@@ -7,6 +7,13 @@
             },
             "name": "Fat Zebra"
         },
+        "com.ewaypayments": {
+            "form": {
+                "customerId": "Customer ID",
+                "refundPwd": "Refund Password"
+            },
+            "name": "eWAY"
+        },
         "com.braintreegateway": {
             "form": {
                 "merchantId": "Merchant ID",
@@ -17,20 +24,6 @@
             },
             "name": "Braintree"
         },
-        "com.ewaypayments": {
-            "form": {
-                "customerId": "Customer ID",
-                "refundPwd": "Refund Password"
-            },
-            "name": "eWAY"
-        },
-        "com.mercurypay": {
-            "form": {
-                "merchantId": "Merchant ID",
-                "password": "Password"
-            },
-            "name": "Mercury"
-        },
         "com.paybox": {
             "form": {
                 "site": "Site Number",
@@ -39,19 +32,19 @@
             },
             "name": "PayBox"
         },
+        "com.mercurypay": {
+            "form": {
+                "merchantId": "Merchant ID",
+                "password": "Password"
+            },
+            "name": "Mercury"
+        },
         "com.paymentexpress": {
             "form": {
                 "username": "Username",
                 "password": "Password"
             },
             "name": "Payment Express"
-        },
-        "com.paypal": {
-            "form": {
-                "clientId": "Client ID",
-                "secret": "Secret"
-            },
-            "name": "PayPal"
         },
         "com.pelecard": {
             "form": {
@@ -60,6 +53,13 @@
                 "password": "Password"
             },
             "name": "Pelecard"
+        },
+        "com.paypal": {
+            "form": {
+                "clientId": "Client ID",
+                "secret": "Secret"
+            },
+            "name": "PayPal"
         },
         "com.stripe": {
             "form": {
@@ -73,24 +73,24 @@
             },
             "name": "Tranzila"
         },
-        "com.worldpay": {
-            "form": {
-                "merchantCode": "Merchant Code",
-                "merchantPassword": "Merchant Password"
-            },
-            "name": "WorldPay"
-        },
         "net.authorize": {
             "form": {
                 "login": "Login ID",
                 "transactionKey": "Transaction Key"
             },
             "name": "Authorize.Net"
+        },
+        "com.worldpay": {
+            "form": {
+                "merchantCode": "Merchant Code",
+                "merchantPassword": "Merchant Password"
+            },
+            "name": "WorldPay"
         }
     },
     "methods": {
         "cash": "Cash",
-        "com.cellarix": "Cellarix",
-        "credit": "Credit Cards"
+        "credit": "Credit Cards",
+        "com.cellarix": "Cellarix"
     }
 }

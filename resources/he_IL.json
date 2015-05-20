@@ -7,13 +7,6 @@
             },
             "name": "��� ����"
         },
-        "com.paypal": {
-            "form": {
-                "clientId": "���� ����",
-                "secret": "���"
-            },
-            "name": "������"
-        },
         "com.pelecard": {
             "form": {
                 "terminalNumber": "����",
@@ -21,6 +14,13 @@
                 "password": "�����"
             },
             "name": "�������"
+        },
+        "com.paypal": {
+            "form": {
+                "clientId": "���� ����",
+                "secret": "���"
+            },
+            "name": "������"
         },
         "com.tranzila": {
             "form": {
@@ -38,7 +38,7 @@
     },
     "methods": {
         "cash": "�����",
-        "com.cellarix": "�������",
-        "credit": "������ �����"
+        "credit": "������ �����",
+        "com.cellarix": "�������"
     }
 }
