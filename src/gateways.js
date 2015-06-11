@@ -5,6 +5,7 @@ var gatewaysList = [
     require("./gateways/au.com.fatzebra"),
     require("./gateways/com.braintreegateway"),
     require("./gateways/com.ewaypayments"),
+    require("./gateways/com.mercadopago"),
     require("./gateways/com.mercurypay"),
     require("./gateways/com.paybox"),
     require("./gateways/com.paymentexpress"),
