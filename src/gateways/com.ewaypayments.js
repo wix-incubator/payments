@@ -8,8 +8,9 @@ module.exports = {
         {type : "string", name : "refundPwd"},
     ],
 
+	// @see List of countries in https://eway.io/
     countries : [
-        "AU",
+        "AU", "GB", "HK", "MY", "NZ", "SG"
     ],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,

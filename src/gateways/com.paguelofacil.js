@@ -1,16 +1,14 @@
 var adapters = require("../adapters.js");
 
 module.exports = {
-    id : "com.stripe",
+    id : "com.paguelofacil",
 
     form : [
-        {type : "string", name : "apiKey"},
+        {type : "string", name : "cclw"},
     ],
 
-	// @see https://stripe.com/global
     countries : [
-        "AT", "AU", "BE", "CA", "CH", "DE", "DK", "ES", "FI", "FR",
-		"GB", "IE", "JP", "IT", "LU", "MX", "NL", "NO", "SE", "US"
+        "PA"
     ],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,

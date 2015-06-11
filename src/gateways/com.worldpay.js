@@ -9,7 +9,7 @@ module.exports = {
     ],
 
     countries : [
-        "GB",
+        "AU", "GB", "US"
     ],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,

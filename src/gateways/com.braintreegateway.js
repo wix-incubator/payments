@@ -11,8 +11,13 @@ module.exports = {
         {type : "string",   name : "merchantAccountId"},
     ],
 
+	// @see https://www.braintreepayments.com/country-selection
     countries : [
-        "US",
+		"AD", "AT", "AU", "BE", "BG", "CA", "CH", "CY", "CZ", "DE",
+		"DK", "EE", "ES", "FI", "FR", "GB", "GG", "GI", "GR", "HK",
+		"HR", "HU", "IE", "IM", "IS", "IT", "JE", "LI", "LT", "LU",
+		"LV", "MC", "MT", "MY", "NL", "NO", "NZ", "PL", "PT", "RO",
+		"SE", "SG", "SI", "SK", "SM", "TR", "US"
     ],
 
     formValuesToMerchant : adapters.braintreeFormValuesToMerchant,

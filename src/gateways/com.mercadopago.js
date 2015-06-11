@@ -1,16 +1,16 @@
 var adapters = require("../adapters.js");
 
 module.exports = {
-    id : "com.stripe",
+    id : "com.mercadopago",
 
     form : [
-        {type : "string", name : "apiKey"},
+        {type : "string", name : "clientId"},
+        {type : "string", name : "clientSecret"},
     ],
 
-	// @see https://stripe.com/global
+	// @see https://www.about-payments.com/knowledge-base/method/mercadopago#countries
     countries : [
-        "AT", "AU", "BE", "CA", "CH", "DE", "DK", "ES", "FI", "FR",
-		"GB", "IE", "JP", "IT", "LU", "MX", "NL", "NO", "SE", "US"
+        "AR", "BR", "CL", "CO", "MX", "VE"
     ],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,

@@ -8,8 +8,11 @@ module.exports = {
         {type : "string", name : "password"},
     ],
 
+	// @see https://www.paymentexpress.com/Knowledge_Base/Connectivity.aspx
+	// @see https://www.paymentexpress.com/Knowledge_Base/Bank_Guides
     countries : [
-        "AU",
+        "AU", "BD", "BN", "CA", "GB", "HK", "IE", "IN", "MO", "MY",
+		"SG", "US", "ZA"
     ],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,
