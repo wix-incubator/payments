@@ -8,6 +8,7 @@ module.exports = {
         {type : "string", name : "clientSecret"},
     ],
 
+	// @see https://www.about-payments.com/knowledge-base/method/mercadopago#countries
     countries : [
         "AR", "BR", "CL", "CO", "MX", "VE"
     ],
