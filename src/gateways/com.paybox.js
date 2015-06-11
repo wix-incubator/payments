@@ -10,7 +10,7 @@ module.exports = {
     ],
 
     countries : [
-        "FR",
+        "BE", "FR", "NL"
     ],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,
