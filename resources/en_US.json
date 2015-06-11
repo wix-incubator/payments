@@ -1,5 +1,12 @@
 {
     "gateways": {
+        "au.com.fatzebra": {
+            "form": {
+                "username": "Username",
+                "password": "Password"
+            },
+            "name": "Fat Zebra"
+        },
         "com.braintreegateway": {
             "form": {
                 "merchantId": "Merchant ID",
@@ -17,12 +24,32 @@
             },
             "name": "eWAY"
         },
+        "com.mercadopago": {
+            "form": {
+                "clientId": "Client ID",
+                "clientSecret": "Client Secret"
+            },
+            "name": "MercadoPago"
+        },
         "com.mercurypay": {
             "form": {
                 "merchantId": "Merchant ID",
                 "password": "Password"
             },
             "name": "Mercury"
+        },
+        "com.paguelofacil": {
+            "form": {
+                "cclw": "CCLW"
+            },
+            "name": "PagueloFacil"
+        },
+        "com.paymentexpress": {
+            "form": {
+                "username": "Username",
+                "password": "Password"
+            },
+            "name": "Payment Express"
         },
         "com.paybox": {
             "form": {
@@ -32,19 +59,12 @@
             },
             "name": "PayBox"
         },
-        "au.com.fatzebra": {
+        "com.paypal": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "clientId": "Client ID",
+                "secret": "Secret"
             },
-            "name": "Fat Zebra"
-        },
-        "com.paymentexpress": {
-            "form": {
-                "username": "Username",
-                "password": "Password"
-            },
-            "name": "Payment Express"
+            "name": "PayPal"
         },
         "com.pelecard": {
             "form": {
@@ -66,12 +86,12 @@
             },
             "name": "Tranzila"
         },
-        "com.paypal": {
+        "com.worldpay": {
             "form": {
-                "clientId": "Client ID",
-                "secret": "Secret"
+                "merchantCode": "Merchant Code",
+                "merchantPassword": "Merchant Password"
             },
-            "name": "PayPal"
+            "name": "WorldPay"
         },
         "net.authorize": {
             "form": {
@@ -79,18 +99,11 @@
                 "transactionKey": "Transaction Key"
             },
             "name": "Authorize.Net"
-        },
-        "com.worldpay": {
-            "form": {
-                "merchantCode": "Merchant Code",
-                "merchantPassword": "Merchant Password"
-            },
-            "name": "WorldPay"
         }
     },
     "methods": {
         "cash": "Cash",
-        "credit": "Credit Cards",
-        "com.cellarix": "Cellarix"
+        "com.cellarix": "Cellarix",
+        "credit": "Credit Cards"
     }
 }

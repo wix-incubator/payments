@@ -7,6 +7,26 @@
             },
             "name": "פאט זברה"
         },
+        "com.mercadopago": {
+            "form": {
+                "clientId": "מזהה לקוח",
+                "clientSecret": "סוד לקוח"
+            },
+            "name": "מרקאדו-פאגו"
+        },
+        "com.paguelofacil": {
+            "form": {
+                "cclw": "CCLW"
+            },
+            "name": "פגואלו-פסיל"
+        },
+        "com.paypal": {
+            "form": {
+                "clientId": "מזהה לקוח",
+                "secret": "סוד"
+            },
+            "name": "פייפאל"
+        },
         "com.pelecard": {
             "form": {
                 "terminalNumber": "מסוף",
@@ -21,13 +41,6 @@
             },
             "name": "טרנזילה"
         },
-        "com.paypal": {
-            "form": {
-                "clientId": "מזהה לקוח",
-                "secret": "סוד"
-            },
-            "name": "פייפאל"
-        },
         "net.authorize": {
             "form": {
                 "login": "Login ID",
@@ -38,7 +51,7 @@
     },
     "methods": {
         "cash": "מזומן",
-        "credit": "כרטיסי אשראי",
-        "com.cellarix": "סלאריקס"
+        "com.cellarix": "סלאריקס",
+        "credit": "כרטיסי אשראי"
     }
 }
