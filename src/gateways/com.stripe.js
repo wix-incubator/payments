@@ -7,8 +7,10 @@ module.exports = {
         {type : "string", name : "apiKey"},
     ],
 
+	// @see https://stripe.com/global
     countries : [
-        "US",
+        "AT", "AU", "BE", "CA", "CH", "DE", "DK", "ES", "FI", "FR",
+		"GB", "IE", "JP", "IT", "LU", "MX", "NL", "NO", "SE", "US"
     ],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,
