@@ -7,6 +7,7 @@ var gatewaysList = [
     require("./gateways/com.ewaypayments"),
     require("./gateways/com.mercadopago"),
     require("./gateways/com.mercurypay"),
+    require("./gateways/com.paguelofacil"),
     require("./gateways/com.paybox"),
     require("./gateways/com.paymentexpress"),
     require("./gateways/com.paypal"),
