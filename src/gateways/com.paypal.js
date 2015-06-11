@@ -8,8 +8,9 @@ module.exports = {
         {type : "string", name : "secret"},
     ],
 
+	// @see https://developer.paypal.com/docs/integration/direct/rest_api_payment_country_currency_support/#direct-credit-card-payments
     countries : [
-        "US", "GB", 
+        "GB", "US"
     ],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,
