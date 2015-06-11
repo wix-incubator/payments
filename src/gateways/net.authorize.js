@@ -8,8 +8,12 @@ module.exports = {
         {type : "string", name : "transactionKey"},
     ],
 
+	// @see http://www.authorize.net/international/
     countries : [
-        "US",
+        "AD", "AT", "AU", "BE", "BG", "CA", "CH", "CY", "CZ", "DE",
+		"DK", "ES", "FI", "FR", "GB", "GI", "GR", "HU", "IE", "IT",
+		"LI", "LU", "MC", "MT", "NL", "NO", "PL", "PT", "RO", "SE",
+		"SI", "SK", "SM", "US", "VA"
     ],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,
