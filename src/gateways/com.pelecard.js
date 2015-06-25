@@ -7,6 +7,7 @@ module.exports = {
         {type : "string", name : "terminalNumber"},
         {type : "string", name : "user"},
         {type : "string", name : "password"},
+        {type : "string", name : "shopNumber"},
     ],
 
     countries : [
