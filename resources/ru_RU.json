@@ -1,0 +1,11 @@
+{
+    "gateways": {
+        "com.dengionline": {
+            "form": {
+                "siteId": "ID сайта",
+                "salt": "\"Соль\" запроса"
+            },
+            "name": "Деньги Online"
+        }
+    }
+}

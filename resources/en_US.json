@@ -17,6 +17,13 @@
             },
             "name": "Braintree"
         },
+        "com.dengionline": {
+            "form": {
+                "siteId": "Site ID",
+                "salt": "\"Salt\" of request"
+            },
+            "name": "Dengi Online"
+        },
         "com.ewaypayments": {
             "form": {
                 "customerId": "Customer ID",
@@ -44,13 +51,6 @@
             },
             "name": "PagueloFacil"
         },
-        "com.paymentexpress": {
-            "form": {
-                "username": "Username",
-                "password": "Password"
-            },
-            "name": "Payment Express"
-        },
         "com.paybox": {
             "form": {
                 "site": "Site Number",
@@ -58,6 +58,13 @@
                 "cle": "Password"
             },
             "name": "PayBox"
+        },
+        "com.paymentexpress": {
+            "form": {
+                "username": "Username",
+                "password": "Password"
+            },
+            "name": "Payment Express"
         },
         "com.paypal": {
             "form": {
@@ -70,15 +77,10 @@
             "form": {
                 "terminalNumber": "Terminal Number",
                 "user": "User",
-                "password": "Password"
+                "password": "Password",
+                "shopNumber": "Shop Number"
             },
             "name": "Pelecard"
-        },
-        "com.stripe": {
-            "form": {
-                "apiKey": "API Key"
-            },
-            "name": "Stripe"
         },
         "com.tranzila": {
             "form": {
@@ -99,6 +101,12 @@
                 "transactionKey": "Transaction Key"
             },
             "name": "Authorize.Net"
+        },
+        "com.stripe": {
+            "form": {
+                "apiKey": "API Key"
+            },
+            "name": "Stripe"
         }
     },
     "methods": {

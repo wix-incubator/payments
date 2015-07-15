@@ -7,6 +7,13 @@
             },
             "name": "פאט זברה"
         },
+        "com.dengionline": {
+            "form": {
+                "siteId": "מזהה אתר",
+                "salt": "\"מלח\" לבקשות"
+            },
+            "name": "דינגי-אונליין"
+        },
         "com.mercadopago": {
             "form": {
                 "clientId": "מזהה לקוח",
@@ -29,9 +36,9 @@
         },
         "com.pelecard": {
             "form": {
-                "terminalNumber": "מסוף",
-                "user": "משתמש",
-                "password": "סיסמא"
+                "terminalNumber": "מספר מסוף",
+                "user": "שם משתמש",
+                "password": "מספר חנות/קופה"
             },
             "name": "פלאקארד"
         },
