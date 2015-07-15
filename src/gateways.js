@@ -4,6 +4,7 @@ var _ = require("lodash");
 var gatewaysList = [
     require("./gateways/au.com.fatzebra"),
     require("./gateways/com.braintreegateway"),
+    require("./gateways/com.dengionline"),
     require("./gateways/com.ewaypayments"),
     require("./gateways/com.mercadopago"),
     require("./gateways/com.mercurypay"),
