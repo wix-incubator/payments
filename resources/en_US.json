@@ -24,19 +24,25 @@
             },
             "name": "Dengi Online"
         },
-        "com.ewaypayments": {
-            "form": {
-                "customerId": "Customer ID",
-                "refundPwd": "Refund Password"
-            },
-            "name": "eWAY"
-        },
         "com.mercadopago": {
             "form": {
                 "clientId": "Client ID",
                 "clientSecret": "Client Secret"
             },
             "name": "MercadoPago"
+        },
+        "com.paguelofacil": {
+            "form": {
+                "cclw": "CCLW"
+            },
+            "name": "PagueloFacil"
+        },
+        "com.ewaypayments": {
+            "form": {
+                "customerId": "Customer ID",
+                "refundPwd": "Refund Password"
+            },
+            "name": "eWAY"
         },
         "com.mercurypay": {
             "form": {
@@ -45,33 +51,12 @@
             },
             "name": "Mercury"
         },
-        "com.paguelofacil": {
-            "form": {
-                "cclw": "CCLW"
-            },
-            "name": "PagueloFacil"
-        },
-        "com.paybox": {
-            "form": {
-                "site": "Site Number",
-                "rang": "Bank Number",
-                "cle": "Password"
-            },
-            "name": "PayBox"
-        },
         "com.paymentexpress": {
             "form": {
                 "username": "Username",
                 "password": "Password"
             },
             "name": "Payment Express"
-        },
-        "com.paypal": {
-            "form": {
-                "clientId": "Client ID",
-                "secret": "Secret"
-            },
-            "name": "PayPal"
         },
         "com.pelecard": {
             "form": {
@@ -81,6 +66,27 @@
                 "shopNumber": "Shop Number"
             },
             "name": "Pelecard"
+        },
+        "com.paypal": {
+            "form": {
+                "clientId": "Client ID",
+                "secret": "Secret"
+            },
+            "name": "PayPal"
+        },
+        "com.paybox": {
+            "form": {
+                "site": "Site Number",
+                "rang": "Bank Number",
+                "cle": "Password"
+            },
+            "name": "PayBox"
+        },
+        "com.stripe": {
+            "form": {
+                "apiKey": "API Key"
+            },
+            "name": "Stripe"
         },
         "com.tranzila": {
             "form": {
@@ -101,17 +107,11 @@
                 "transactionKey": "Transaction Key"
             },
             "name": "Authorize.Net"
-        },
-        "com.stripe": {
-            "form": {
-                "apiKey": "API Key"
-            },
-            "name": "Stripe"
         }
     },
     "methods": {
-        "cash": "Cash",
         "com.cellarix": "Cellarix",
-        "credit": "Credit Cards"
+        "cash": "Cash",
+        "credit": "Cards"
     }
 }

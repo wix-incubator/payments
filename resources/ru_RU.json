@@ -1,11 +1,117 @@
 {
     "gateways": {
+        "au.com.fatzebra": {
+            "form": {
+                "username": "Username",
+                "password": "Password"
+            },
+            "name": "Fat Zebra"
+        },
+        "com.braintreegateway": {
+            "form": {
+                "merchantId": "Merchant ID",
+                "publicKey": "Public Key",
+                "privateKey": "Private Key",
+                "currency": "Currency",
+                "merchantAccountId": "Merchant Account ID"
+            },
+            "name": "Braintree"
+        },
         "com.dengionline": {
             "form": {
                 "siteId": "ID сайта",
                 "salt": "\"Соль\" запроса"
             },
             "name": "Деньги Online"
+        },
+        "com.mercadopago": {
+            "form": {
+                "clientId": "Client ID",
+                "clientSecret": "Client Secret"
+            },
+            "name": "MercadoPago"
+        },
+        "com.paguelofacil": {
+            "form": {
+                "cclw": "CCLW"
+            },
+            "name": "PagueloFacil"
+        },
+        "com.ewaypayments": {
+            "form": {
+                "customerId": "Customer ID",
+                "refundPwd": "Refund Password"
+            },
+            "name": "eWAY"
+        },
+        "com.mercurypay": {
+            "form": {
+                "merchantId": "Merchant ID",
+                "password": "Password"
+            },
+            "name": "Mercury"
+        },
+        "com.paymentexpress": {
+            "form": {
+                "username": "Username",
+                "password": "Password"
+            },
+            "name": "Payment Express"
+        },
+        "com.pelecard": {
+            "form": {
+                "terminalNumber": "Terminal Number",
+                "user": "User",
+                "password": "Password",
+                "shopNumber": "Shop Number"
+            },
+            "name": "Pelecard"
+        },
+        "com.paypal": {
+            "form": {
+                "clientId": "Client ID",
+                "secret": "Secret"
+            },
+            "name": "PayPal"
+        },
+        "com.paybox": {
+            "form": {
+                "site": "Site Number",
+                "rang": "Bank Number",
+                "cle": "Password"
+            },
+            "name": "PayBox"
+        },
+        "com.stripe": {
+            "form": {
+                "apiKey": "API Key"
+            },
+            "name": "Stripe"
+        },
+        "com.tranzila": {
+            "form": {
+                "username": "Username"
+            },
+            "name": "Tranzila"
+        },
+        "com.worldpay": {
+            "form": {
+                "merchantCode": "Merchant Code",
+                "merchantPassword": "Merchant Password"
+            },
+            "name": "WorldPay"
+        },
+        "net.authorize": {
+            "form": {
+                "login": "Login ID",
+                "transactionKey": "Transaction Key"
+            },
+            "name": "Authorize.Net"
         }
+    },
+    "methods": {
+        "com.cellarix": "Cellarix",
+        "cash": "Cash",
+        "credit": "Cards"
     }
 }

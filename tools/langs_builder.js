@@ -81,6 +81,7 @@ Q().then(function() {
     _.each(tokens, function(token, locale) {
         fs.writeFileSync(path.join(__dirname, "..", "resources", locale.replace("-", "_") + ".json"), JSON.stringify(token, null, 4), 'utf8');
     });
+    return tokens;
 }).then(function(tokens) {
     var fileContent = 'module.exports = {\n';
     _.each(tokens, function(val, key) {
