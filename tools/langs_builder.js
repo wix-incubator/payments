@@ -81,6 +81,14 @@ Q().then(function() {
     _.each(tokens, function(token, locale) {
         fs.writeFileSync(path.join(__dirname, "..", "resources", locale.replace("-", "_") + ".json"), JSON.stringify(token, null, 4), 'utf8');
     });
+}).then(function(tokens) {
+    var fileContent = 'module.exports = {\n';
+    _.each(tokens, function(val, key) {
+        var locale = key.replace("-", "_");
+        fileContent += '    "' + locale + '" : require("../resources/' + locale + '.json"),\n';
+    });
+    fileContent += '};\n';
+    fs.writeFileSync(path.join(__dirname, "..", "src", "locales.js"), fileContent, 'utf8');
 }).then(function() {
     console.log(" - Success.")
 }).catch(function(err) {
