@@ -2,48 +2,48 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Kullanıcı Adı",
+                "password": "Şifre"
             },
-            "name": "Fat Zebra"
+            "name": "Dev Zebra"
         },
         "com.braintreegateway": {
             "form": {
-                "merchantId": "Merchant ID",
-                "publicKey": "Public Key",
-                "privateKey": "Private Key",
-                "currency": "Currency",
-                "merchantAccountId": "Merchant Account ID"
+                "merchantId": "Tüccar Numarası",
+                "publicKey": "Genel Anahtar",
+                "privateKey": "Özel Anahtar",
+                "currency": "Para Birimi",
+                "merchantAccountId": "Tüccar Hesap Numarası"
             },
             "name": "Braintree"
         },
         "com.dengionline": {
             "form": {
-                "siteId": "ID сайта",
-                "salt": "\"Соль\" запроса"
+                "siteId": "Site Kimliği",
+                "salt": "\"Salt\" of request"
             },
-            "name": "Деньги Online"
+            "name": "Dengi Online"
         },
         "com.ewaypayments": {
             "form": {
-                "customerId": "Customer ID",
-                "refundPwd": "Refund Password"
+                "customerId": "Müşteri Kimliği",
+                "refundPwd": "İade Şifresi"
             },
             "name": "eWAY"
         },
         "com.mercadopago": {
             "form": {
-                "clientId": "Client ID",
-                "clientSecret": "Client Secret"
+                "clientId": "Müşteri Kimliği",
+                "clientSecret": "Müşteri Sırrı"
             },
             "name": "MercadoPago"
         },
         "com.mercurypay": {
             "form": {
-                "merchantId": "Merchant ID",
-                "password": "Password"
+                "merchantId": "Tüccar Kimliği",
+                "password": "Şifre"
             },
-            "name": "Mercury"
+            "name": "Merkür"
         },
         "com.paguelofacil": {
             "form": {
@@ -53,65 +53,65 @@
         },
         "com.paybox": {
             "form": {
-                "site": "Site Number",
-                "rang": "Bank Number",
-                "cle": "Password"
+                "site": "Site Numarası",
+                "rang": "Banka Numarası",
+                "cle": "Şifre"
             },
             "name": "PayBox"
         },
         "com.paymentexpress": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Kullanıcı Adı",
+                "password": "Şifre"
             },
             "name": "Payment Express"
         },
         "com.paypal": {
             "form": {
-                "clientId": "Client ID",
-                "secret": "Secret"
+                "clientId": "Müşteri Numarası",
+                "secret": "Gizli"
             },
             "name": "PayPal"
         },
         "com.pelecard": {
             "form": {
-                "terminalNumber": "Terminal Number",
-                "user": "User",
-                "password": "Password",
-                "shopNumber": "Shop Number"
+                "terminalNumber": "Terminal Numarası",
+                "user": "Kullanıcı",
+                "password": "Şifre",
+                "shopNumber": "Mağaza Numarası"
             },
             "name": "Pelecard"
         },
         "com.stripe": {
             "form": {
-                "apiKey": "API Key"
+                "apiKey": "API Anahtarı"
             },
             "name": "Stripe"
         },
         "com.tranzila": {
             "form": {
-                "username": "Username"
+                "username": "Kullanıcı Adı"
             },
             "name": "Tranzila"
         },
         "com.worldpay": {
             "form": {
-                "merchantCode": "Merchant Code",
-                "merchantPassword": "Merchant Password"
+                "merchantCode": "Tüccar Kodu",
+                "merchantPassword": "Tüccar Şifresi"
             },
             "name": "WorldPay"
         },
         "net.authorize": {
             "form": {
-                "login": "Login ID",
-                "transactionKey": "Transaction Key"
+                "login": "Giriş Kimliği",
+                "transactionKey": "İşlem Anahtarı"
             },
             "name": "Authorize.Net"
         }
     },
     "methods": {
-        "cash": "Наличные",
+        "cash": "Nakit",
         "com.cellarix": "Cellarix",
-        "credit": "Карты"
+        "credit": "Kart"
     }
 }

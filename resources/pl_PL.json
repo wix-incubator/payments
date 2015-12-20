@@ -2,46 +2,46 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Nazwa użytkownika",
+                "password": "Hasło"
             },
-            "name": "Fat Zebra"
+            "name": "Gruba zebra"
         },
         "com.braintreegateway": {
             "form": {
-                "merchantId": "Merchant ID",
-                "publicKey": "Public Key",
-                "privateKey": "Private Key",
-                "currency": "Currency",
-                "merchantAccountId": "Merchant Account ID"
+                "merchantId": "ID handlowca",
+                "publicKey": "Klucz publiczny",
+                "privateKey": "Klucz prywatny",
+                "currency": "Waluta",
+                "merchantAccountId": "ID rachunku handlowca"
             },
             "name": "Braintree"
         },
         "com.dengionline": {
             "form": {
-                "siteId": "ID сайта",
-                "salt": "\"Соль\" запроса"
+                "siteId": "ID obiektu",
+                "salt": "\"Istota\" żądania"
             },
-            "name": "Деньги Online"
+            "name": "Dengi Online"
         },
         "com.ewaypayments": {
             "form": {
-                "customerId": "Customer ID",
-                "refundPwd": "Refund Password"
+                "customerId": "ID klienta",
+                "refundPwd": "Hasło zwrotu kosztów"
             },
             "name": "eWAY"
         },
         "com.mercadopago": {
             "form": {
-                "clientId": "Client ID",
-                "clientSecret": "Client Secret"
+                "clientId": "ID klienta",
+                "clientSecret": "Tajemnica klienta"
             },
             "name": "MercadoPago"
         },
         "com.mercurypay": {
             "form": {
-                "merchantId": "Merchant ID",
-                "password": "Password"
+                "merchantId": "ID handlowca",
+                "password": "Hasło"
             },
             "name": "Mercury"
         },
@@ -53,65 +53,65 @@
         },
         "com.paybox": {
             "form": {
-                "site": "Site Number",
-                "rang": "Bank Number",
-                "cle": "Password"
+                "site": "Numer obiektu",
+                "rang": "Numer banku",
+                "cle": "Hasło"
             },
             "name": "PayBox"
         },
         "com.paymentexpress": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Nazwa użytkownika",
+                "password": "Hasło"
             },
             "name": "Payment Express"
         },
         "com.paypal": {
             "form": {
-                "clientId": "Client ID",
-                "secret": "Secret"
+                "clientId": "ID klienta",
+                "secret": "Tajemnica"
             },
             "name": "PayPal"
         },
         "com.pelecard": {
             "form": {
-                "terminalNumber": "Terminal Number",
-                "user": "User",
-                "password": "Password",
-                "shopNumber": "Shop Number"
+                "terminalNumber": "Numer terminala",
+                "user": "Użytkownik",
+                "password": "Hasło",
+                "shopNumber": "Numer sklepu"
             },
             "name": "Pelecard"
         },
         "com.stripe": {
             "form": {
-                "apiKey": "API Key"
+                "apiKey": "Klucz API"
             },
-            "name": "Stripe"
+            "name": "Pasek"
         },
         "com.tranzila": {
             "form": {
-                "username": "Username"
+                "username": "Nazwa użytkownika"
             },
             "name": "Tranzila"
         },
         "com.worldpay": {
             "form": {
-                "merchantCode": "Merchant Code",
-                "merchantPassword": "Merchant Password"
+                "merchantCode": "Kod handlowca",
+                "merchantPassword": "Hasło handlowca"
             },
             "name": "WorldPay"
         },
         "net.authorize": {
             "form": {
                 "login": "Login ID",
-                "transactionKey": "Transaction Key"
+                "transactionKey": "Klucz transakcji"
             },
             "name": "Authorize.Net"
         }
     },
     "methods": {
-        "cash": "Наличные",
+        "cash": "Gotówka",
         "com.cellarix": "Cellarix",
-        "credit": "Карты"
+        "credit": "Karty"
     }
 }

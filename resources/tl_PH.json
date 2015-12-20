@@ -19,17 +19,10 @@
         },
         "com.dengionline": {
             "form": {
-                "siteId": "ID сайта",
-                "salt": "\"Соль\" запроса"
+                "siteId": "Site ID",
+                "salt": "\"Salt\" of request"
             },
-            "name": "Деньги Online"
-        },
-        "com.ewaypayments": {
-            "form": {
-                "customerId": "Customer ID",
-                "refundPwd": "Refund Password"
-            },
-            "name": "eWAY"
+            "name": "Dengi Online"
         },
         "com.mercadopago": {
             "form": {
@@ -38,6 +31,19 @@
             },
             "name": "MercadoPago"
         },
+        "com.paguelofacil": {
+            "form": {
+                "cclw": "CCLW"
+            },
+            "name": "PagueloFacil"
+        },
+        "com.ewaypayments": {
+            "form": {
+                "customerId": "Customer ID",
+                "refundPwd": "Refund Password"
+            },
+            "name": "eWAY"
+        },
         "com.mercurypay": {
             "form": {
                 "merchantId": "Merchant ID",
@@ -45,33 +51,12 @@
             },
             "name": "Mercury"
         },
-        "com.paguelofacil": {
-            "form": {
-                "cclw": "CCLW"
-            },
-            "name": "PagueloFacil"
-        },
-        "com.paybox": {
-            "form": {
-                "site": "Site Number",
-                "rang": "Bank Number",
-                "cle": "Password"
-            },
-            "name": "PayBox"
-        },
         "com.paymentexpress": {
             "form": {
                 "username": "Username",
                 "password": "Password"
             },
             "name": "Payment Express"
-        },
-        "com.paypal": {
-            "form": {
-                "clientId": "Client ID",
-                "secret": "Secret"
-            },
-            "name": "PayPal"
         },
         "com.pelecard": {
             "form": {
@@ -81,6 +66,21 @@
                 "shopNumber": "Shop Number"
             },
             "name": "Pelecard"
+        },
+        "com.paypal": {
+            "form": {
+                "clientId": "Client ID",
+                "secret": "Secret"
+            },
+            "name": "PayPal"
+        },
+        "com.paybox": {
+            "form": {
+                "site": "Site Number",
+                "rang": "Bank Number",
+                "cle": "Password"
+            },
+            "name": "PayBox"
         },
         "com.stripe": {
             "form": {
@@ -110,8 +110,8 @@
         }
     },
     "methods": {
-        "cash": "Наличные",
         "com.cellarix": "Cellarix",
-        "credit": "Карты"
+        "cash": "Cash",
+        "credit": "Cards"
     }
 }

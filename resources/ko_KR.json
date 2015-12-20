@@ -2,8 +2,8 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "사용자 이름",
+                "password": "비밀번호"
             },
             "name": "Fat Zebra"
         },
@@ -19,10 +19,10 @@
         },
         "com.dengionline": {
             "form": {
-                "siteId": "ID сайта",
-                "salt": "\"Соль\" запроса"
+                "siteId": "Site ID",
+                "salt": "\"Salt\" of request"
             },
-            "name": "Деньги Online"
+            "name": "Dengi Online"
         },
         "com.ewaypayments": {
             "form": {
@@ -68,8 +68,8 @@
         },
         "com.paypal": {
             "form": {
-                "clientId": "Client ID",
-                "secret": "Secret"
+                "clientId": "ID",
+                "secret": "비밀번호"
             },
             "name": "PayPal"
         },
@@ -103,15 +103,15 @@
         },
         "net.authorize": {
             "form": {
-                "login": "Login ID",
-                "transactionKey": "Transaction Key"
+                "login": "로그인 ID",
+                "transactionKey": "트랜잭션 키"
             },
             "name": "Authorize.Net"
         }
     },
     "methods": {
-        "cash": "Наличные",
+        "cash": "현금결제",
         "com.cellarix": "Cellarix",
-        "credit": "Карты"
+        "credit": "카드 결제"
     }
 }

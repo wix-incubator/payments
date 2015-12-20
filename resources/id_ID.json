@@ -2,46 +2,46 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Nama pengguna",
+                "password": "Kata sandi"
             },
             "name": "Fat Zebra"
         },
         "com.braintreegateway": {
             "form": {
-                "merchantId": "Merchant ID",
-                "publicKey": "Public Key",
-                "privateKey": "Private Key",
-                "currency": "Currency",
-                "merchantAccountId": "Merchant Account ID"
+                "merchantId": "Nomor Merchant",
+                "publicKey": "Kunci Publik",
+                "privateKey": "Kunci Pribadi",
+                "currency": "Mata Uang",
+                "merchantAccountId": "Nomor Akun Merchant"
             },
             "name": "Braintree"
         },
         "com.dengionline": {
             "form": {
-                "siteId": "ID сайта",
-                "salt": "\"Соль\" запроса"
+                "siteId": "Nomor Situs",
+                "salt": "\"Salt\" permintaan"
             },
-            "name": "Деньги Online"
+            "name": "Dengi Online"
         },
         "com.ewaypayments": {
             "form": {
-                "customerId": "Customer ID",
-                "refundPwd": "Refund Password"
+                "customerId": "Nomor Pelanggan",
+                "refundPwd": "Kata Sandi Pengembalian Dana"
             },
             "name": "eWAY"
         },
         "com.mercadopago": {
             "form": {
-                "clientId": "Client ID",
-                "clientSecret": "Client Secret"
+                "clientId": "Nomor Klien",
+                "clientSecret": "Rahasia Klien"
             },
             "name": "MercadoPago"
         },
         "com.mercurypay": {
             "form": {
-                "merchantId": "Merchant ID",
-                "password": "Password"
+                "merchantId": "Nomor Merchant",
+                "password": "Kata sandi"
             },
             "name": "Mercury"
         },
@@ -53,65 +53,65 @@
         },
         "com.paybox": {
             "form": {
-                "site": "Site Number",
-                "rang": "Bank Number",
-                "cle": "Password"
+                "site": "Nomor Situs",
+                "rang": "Nomor Bank",
+                "cle": "Kata sandi"
             },
             "name": "PayBox"
         },
         "com.paymentexpress": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Nama pengguna",
+                "password": "Kata sandi"
             },
             "name": "Payment Express"
         },
         "com.paypal": {
             "form": {
-                "clientId": "Client ID",
-                "secret": "Secret"
+                "clientId": "Nomor Klien",
+                "secret": "Rahasia"
             },
             "name": "PayPal"
         },
         "com.pelecard": {
             "form": {
-                "terminalNumber": "Terminal Number",
-                "user": "User",
-                "password": "Password",
-                "shopNumber": "Shop Number"
+                "terminalNumber": "Nomor Terminal",
+                "user": "Pengguna",
+                "password": "Kata sandi",
+                "shopNumber": "Nomor Toko"
             },
             "name": "Pelecard"
         },
         "com.stripe": {
             "form": {
-                "apiKey": "API Key"
+                "apiKey": "Kunci API"
             },
             "name": "Stripe"
         },
         "com.tranzila": {
             "form": {
-                "username": "Username"
+                "username": "Nama pengguna"
             },
             "name": "Tranzila"
         },
         "com.worldpay": {
             "form": {
-                "merchantCode": "Merchant Code",
-                "merchantPassword": "Merchant Password"
+                "merchantCode": "Kode Merchant",
+                "merchantPassword": "Kata Sandi Merchant"
             },
             "name": "WorldPay"
         },
         "net.authorize": {
             "form": {
-                "login": "Login ID",
-                "transactionKey": "Transaction Key"
+                "login": "Nomor Login",
+                "transactionKey": "Kunci Transaksi"
             },
             "name": "Authorize.Net"
         }
     },
     "methods": {
-        "cash": "Наличные",
+        "cash": "Tunai",
         "com.cellarix": "Cellarix",
-        "credit": "Карты"
+        "credit": "Kartu"
     }
 }

@@ -2,8 +2,8 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Brukernavn",
+                "password": "Passord"
             },
             "name": "Fat Zebra"
         },
@@ -12,28 +12,28 @@
                 "merchantId": "Merchant ID",
                 "publicKey": "Public Key",
                 "privateKey": "Private Key",
-                "currency": "Currency",
-                "merchantAccountId": "Merchant Account ID"
+                "currency": "Valuta",
+                "merchantAccountId": "Merchant konto-ID"
             },
             "name": "Braintree"
         },
         "com.dengionline": {
             "form": {
-                "siteId": "ID сайта",
-                "salt": "\"Соль\" запроса"
+                "siteId": "Nettside-ID",
+                "salt": "\"Salt\" foretrukket"
             },
-            "name": "Деньги Online"
+            "name": "Dengi Online"
         },
         "com.ewaypayments": {
             "form": {
-                "customerId": "Customer ID",
-                "refundPwd": "Refund Password"
+                "customerId": "Kunde-ID",
+                "refundPwd": "Refunder passord"
             },
             "name": "eWAY"
         },
         "com.mercadopago": {
             "form": {
-                "clientId": "Client ID",
+                "clientId": "Kunde-ID",
                 "clientSecret": "Client Secret"
             },
             "name": "MercadoPago"
@@ -41,7 +41,7 @@
         "com.mercurypay": {
             "form": {
                 "merchantId": "Merchant ID",
-                "password": "Password"
+                "password": "Passord"
             },
             "name": "Mercury"
         },
@@ -53,32 +53,32 @@
         },
         "com.paybox": {
             "form": {
-                "site": "Site Number",
-                "rang": "Bank Number",
-                "cle": "Password"
+                "site": "Nettstednummer",
+                "rang": "Banknummer",
+                "cle": "Passord"
             },
             "name": "PayBox"
         },
         "com.paymentexpress": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Brukernavn",
+                "password": "Passord"
             },
             "name": "Payment Express"
         },
         "com.paypal": {
             "form": {
-                "clientId": "Client ID",
+                "clientId": "Kunde-ID",
                 "secret": "Secret"
             },
             "name": "PayPal"
         },
         "com.pelecard": {
             "form": {
-                "terminalNumber": "Terminal Number",
-                "user": "User",
-                "password": "Password",
-                "shopNumber": "Shop Number"
+                "terminalNumber": "Terminalnummer",
+                "user": "Bruker",
+                "password": "Passord",
+                "shopNumber": "Kjøp nummer"
             },
             "name": "Pelecard"
         },
@@ -90,28 +90,28 @@
         },
         "com.tranzila": {
             "form": {
-                "username": "Username"
+                "username": "Brukernavn"
             },
             "name": "Tranzila"
         },
         "com.worldpay": {
             "form": {
-                "merchantCode": "Merchant Code",
-                "merchantPassword": "Merchant Password"
+                "merchantCode": "Merchant-kode",
+                "merchantPassword": "Merchant-passord"
             },
             "name": "WorldPay"
         },
         "net.authorize": {
             "form": {
-                "login": "Login ID",
+                "login": "Logg inn ID",
                 "transactionKey": "Transaction Key"
             },
             "name": "Authorize.Net"
         }
     },
     "methods": {
-        "cash": "Наличные",
+        "cash": "Kontant",
         "com.cellarix": "Cellarix",
-        "credit": "Карты"
+        "credit": "Kort"
     }
 }

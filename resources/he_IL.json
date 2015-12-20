@@ -24,25 +24,19 @@
             },
             "name": "דינגי-אונליין"
         },
-        "com.mercadopago": {
-            "form": {
-                "clientId": "מזהה לקוח",
-                "clientSecret": "סוד לקוח"
-            },
-            "name": "מרקאדו-פאגו"
-        },
-        "com.paguelofacil": {
-            "form": {
-                "cclw": "CCLW"
-            },
-            "name": "פגואלו-פסיל"
-        },
         "com.ewaypayments": {
             "form": {
                 "customerId": "Customer ID",
                 "refundPwd": "Refund Password"
             },
             "name": "eWAY"
+        },
+        "com.mercadopago": {
+            "form": {
+                "clientId": "מזהה לקוח",
+                "clientSecret": "סוד לקוח"
+            },
+            "name": "מרקאדו-פאגו"
         },
         "com.mercurypay": {
             "form": {
@@ -51,28 +45,11 @@
             },
             "name": "Mercury"
         },
-        "com.paymentexpress": {
+        "com.paguelofacil": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "cclw": "CCLW"
             },
-            "name": "Payment Express"
-        },
-        "com.pelecard": {
-            "form": {
-                "terminalNumber": "מספר מסוף",
-                "user": "שם משתמש",
-                "password": "מספר חנות/קופה",
-                "shopNumber": "מספר חנות"
-            },
-            "name": "פלאקארד"
-        },
-        "com.paypal": {
-            "form": {
-                "clientId": "מזהה לקוח",
-                "secret": "סוד"
-            },
-            "name": "פייפאל"
+            "name": "פגואלו-פסיל"
         },
         "com.paybox": {
             "form": {
@@ -81,6 +58,29 @@
                 "cle": "Password"
             },
             "name": "PayBox"
+        },
+        "com.paymentexpress": {
+            "form": {
+                "username": "Username",
+                "password": "Password"
+            },
+            "name": "Payment Express"
+        },
+        "com.paypal": {
+            "form": {
+                "clientId": "מזהה לקוח",
+                "secret": "סוד"
+            },
+            "name": "פייפאל"
+        },
+        "com.pelecard": {
+            "form": {
+                "terminalNumber": "מספר מסוף",
+                "user": "שם משתמש",
+                "password": "סיסמה",
+                "shopNumber": "מספר חנות"
+            },
+            "name": "פלאקארד"
         },
         "com.stripe": {
             "form": {
@@ -110,8 +110,8 @@
         }
     },
     "methods": {
-        "com.cellarix": "סלאריקס",
         "cash": "מזומן",
+        "com.cellarix": "סלאריקס",
         "credit": "כרטיסי אשראי"
     }
 }

@@ -1,0 +1,117 @@
+{
+    "gateways": {
+        "au.com.fatzebra": {
+            "form": {
+                "username": "Потребителско име",
+                "password": "Парола"
+            },
+            "name": "Fat Zebra"
+        },
+        "com.braintreegateway": {
+            "form": {
+                "merchantId": "ID на търговец",
+                "publicKey": "Публичен ключ",
+                "privateKey": "Личен ключ",
+                "currency": "Валута",
+                "merchantAccountId": "ID на търговски акаунт"
+            },
+            "name": "Braintree"
+        },
+        "com.dengionline": {
+            "form": {
+                "siteId": "ID на сайта",
+                "salt": "\"Солта\" на изискването"
+            },
+            "name": "Dengi Online"
+        },
+        "com.ewaypayments": {
+            "form": {
+                "customerId": "ID на клиента",
+                "refundPwd": "Възстановяване на парола"
+            },
+            "name": "eWAY"
+        },
+        "com.mercadopago": {
+            "form": {
+                "clientId": "ID на клиент",
+                "clientSecret": "Клиентска тайна"
+            },
+            "name": "MercadoPago"
+        },
+        "com.mercurypay": {
+            "form": {
+                "merchantId": "ID на търговец",
+                "password": "Парола"
+            },
+            "name": "Живак"
+        },
+        "com.paguelofacil": {
+            "form": {
+                "cclw": "CCLW"
+            },
+            "name": "PagueloFacil"
+        },
+        "com.paybox": {
+            "form": {
+                "site": "Номер на сайта",
+                "rang": "Номер на банка",
+                "cle": "Парола"
+            },
+            "name": "PayBox"
+        },
+        "com.paymentexpress": {
+            "form": {
+                "username": "Потребителско име",
+                "password": "Парола"
+            },
+            "name": "Експресно плащане"
+        },
+        "com.paypal": {
+            "form": {
+                "clientId": "ID на клиент",
+                "secret": "Тайна"
+            },
+            "name": "PayPal"
+        },
+        "com.pelecard": {
+            "form": {
+                "terminalNumber": "Номер на терминал",
+                "user": "Потребител",
+                "password": "Парола",
+                "shopNumber": "Номер на магазин"
+            },
+            "name": "Pelecard"
+        },
+        "com.stripe": {
+            "form": {
+                "apiKey": "API Key"
+            },
+            "name": "Категория"
+        },
+        "com.tranzila": {
+            "form": {
+                "username": "Потребителско име"
+            },
+            "name": "Tranzila"
+        },
+        "com.worldpay": {
+            "form": {
+                "merchantCode": "Търговски код",
+                "merchantPassword": "Търговска парола"
+            },
+            "name": "WorldPay"
+        },
+        "net.authorize": {
+            "form": {
+                "login": "ID за влизане",
+                "transactionKey": "Код на транзакцията"
+            },
+            "name": "Authorize.Net"
+        }
+    },
+    "methods": {
+        "cash": "Кеш",
+        "com.cellarix": "Cellarix",
+        "credit": "Карти"
+    }
+}

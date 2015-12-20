@@ -1,0 +1,117 @@
+{
+    "gateways": {
+        "au.com.fatzebra": {
+            "form": {
+                "username": "प्रयोक्ता नाम",
+                "password": "पासवर्ड"
+            },
+            "name": "Fat Zebra"
+        },
+        "com.braintreegateway": {
+            "form": {
+                "merchantId": "मर्चेंट आईडी",
+                "publicKey": "सार्वजनिक कुंजी",
+                "privateKey": "निजी कुंजी",
+                "currency": "मुद्रा",
+                "merchantAccountId": "मर्चेंट खाता आईडी"
+            },
+            "name": "Braintree"
+        },
+        "com.dengionline": {
+            "form": {
+                "siteId": "साइट आईडी",
+                "salt": "अनुरोध का \"नमक\""
+            },
+            "name": "Dengi ऑनलाइन"
+        },
+        "com.ewaypayments": {
+            "form": {
+                "customerId": "ग्राहक आईडी",
+                "refundPwd": "रिफंड पासवर्ड"
+            },
+            "name": "eWAY"
+        },
+        "com.mercadopago": {
+            "form": {
+                "clientId": "क्लाइंट आईडी",
+                "clientSecret": "क्लाइंट का सीक्रेट"
+            },
+            "name": "MercadoPago"
+        },
+        "com.mercurypay": {
+            "form": {
+                "merchantId": "मर्चेंट आईडी",
+                "password": "पासवर्ड"
+            },
+            "name": "मर्करी"
+        },
+        "com.paguelofacil": {
+            "form": {
+                "cclw": "CCLW"
+            },
+            "name": "PagueloFacil"
+        },
+        "com.paybox": {
+            "form": {
+                "site": "साइट नंबर",
+                "rang": "बैंक नंबर",
+                "cle": "पासवर्ड"
+            },
+            "name": "PayBox"
+        },
+        "com.paymentexpress": {
+            "form": {
+                "username": "प्रयोक्ता नाम",
+                "password": "पासवर्ड"
+            },
+            "name": "Payment Express"
+        },
+        "com.paypal": {
+            "form": {
+                "clientId": "क्लाइंट आईडी",
+                "secret": "सीक्रेट"
+            },
+            "name": "PayPal"
+        },
+        "com.pelecard": {
+            "form": {
+                "terminalNumber": "टर्मिनल नंबर",
+                "user": "प्रयोक्ता",
+                "password": "पासवर्ड",
+                "shopNumber": "दुकान नंबर"
+            },
+            "name": "Pelecard"
+        },
+        "com.stripe": {
+            "form": {
+                "apiKey": "API कुंजी"
+            },
+            "name": "स्ट्राइप"
+        },
+        "com.tranzila": {
+            "form": {
+                "username": "प्रयोक्ता नाम"
+            },
+            "name": "Tranzila"
+        },
+        "com.worldpay": {
+            "form": {
+                "merchantCode": "मर्चेंट कोड",
+                "merchantPassword": "मर्चेंट पासवर्ड"
+            },
+            "name": "WorldPay"
+        },
+        "net.authorize": {
+            "form": {
+                "login": "लॉगइन आईडी",
+                "transactionKey": "ट्रांजैक्शन कुंजी"
+            },
+            "name": "Authorize.Net"
+        }
+    },
+    "methods": {
+        "cash": "नकद",
+        "com.cellarix": "Cellarix",
+        "credit": "कार्ड"
+    }
+}

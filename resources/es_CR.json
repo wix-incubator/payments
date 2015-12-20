@@ -2,46 +2,46 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Nombre de usuario",
+                "password": "Contraseña"
             },
             "name": "Fat Zebra"
         },
         "com.braintreegateway": {
             "form": {
-                "merchantId": "Merchant ID",
-                "publicKey": "Public Key",
-                "privateKey": "Private Key",
-                "currency": "Currency",
-                "merchantAccountId": "Merchant Account ID"
+                "merchantId": "ID del comerciante",
+                "publicKey": "Public Key (llave pública)",
+                "privateKey": "Private Key (llave privada)",
+                "currency": "Divisa",
+                "merchantAccountId": "ID de la cuenta del comerciante"
             },
             "name": "Braintree"
         },
         "com.dengionline": {
             "form": {
-                "siteId": "ID сайта",
-                "salt": "\"Соль\" запроса"
+                "siteId": "ID del sitio",
+                "salt": "\"Salt\" of request"
             },
-            "name": "Деньги Online"
+            "name": "Dengi Online"
         },
         "com.ewaypayments": {
             "form": {
-                "customerId": "Customer ID",
+                "customerId": "ID del cliente",
                 "refundPwd": "Refund Password"
             },
             "name": "eWAY"
         },
         "com.mercadopago": {
             "form": {
-                "clientId": "Client ID",
-                "clientSecret": "Client Secret"
+                "clientId": "ID del cliente",
+                "clientSecret": "Secreto del cliente"
             },
             "name": "MercadoPago"
         },
         "com.mercurypay": {
             "form": {
-                "merchantId": "Merchant ID",
-                "password": "Password"
+                "merchantId": "ID del comerciante",
+                "password": "Contraseña"
             },
             "name": "Mercury"
         },
@@ -53,65 +53,65 @@
         },
         "com.paybox": {
             "form": {
-                "site": "Site Number",
-                "rang": "Bank Number",
-                "cle": "Password"
+                "site": "Número del sitio",
+                "rang": "Número del banco",
+                "cle": "Contraseña"
             },
             "name": "PayBox"
         },
         "com.paymentexpress": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Nombre de usuario",
+                "password": "Contraseña"
             },
             "name": "Payment Express"
         },
         "com.paypal": {
             "form": {
-                "clientId": "Client ID",
-                "secret": "Secret"
+                "clientId": "ID del cliente",
+                "secret": "Secreto"
             },
             "name": "PayPal"
         },
         "com.pelecard": {
             "form": {
-                "terminalNumber": "Terminal Number",
-                "user": "User",
-                "password": "Password",
-                "shopNumber": "Shop Number"
+                "terminalNumber": "Número de terminal",
+                "user": "Usuario",
+                "password": "Contraseña",
+                "shopNumber": "Número de tienda"
             },
             "name": "Pelecard"
         },
         "com.stripe": {
             "form": {
-                "apiKey": "API Key"
+                "apiKey": "Llave API"
             },
             "name": "Stripe"
         },
         "com.tranzila": {
             "form": {
-                "username": "Username"
+                "username": "Nombre de usuario"
             },
             "name": "Tranzila"
         },
         "com.worldpay": {
             "form": {
-                "merchantCode": "Merchant Code",
-                "merchantPassword": "Merchant Password"
+                "merchantCode": "Código del comerciante",
+                "merchantPassword": "Contraseña del comerciante"
             },
             "name": "WorldPay"
         },
         "net.authorize": {
             "form": {
-                "login": "Login ID",
+                "login": "ID de registro",
                 "transactionKey": "Transaction Key"
             },
             "name": "Authorize.Net"
         }
     },
     "methods": {
-        "cash": "Наличные",
+        "cash": "Efectivo",
         "com.cellarix": "Cellarix",
-        "credit": "Карты"
+        "credit": "Tarjetas"
     }
 }

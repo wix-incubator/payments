@@ -2,8 +2,8 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Nome de usuário",
+                "password": "Senha"
             },
             "name": "Fat Zebra"
         },
@@ -12,17 +12,17 @@
                 "merchantId": "Merchant ID",
                 "publicKey": "Public Key",
                 "privateKey": "Private Key",
-                "currency": "Currency",
+                "currency": "Moeda",
                 "merchantAccountId": "Merchant Account ID"
             },
             "name": "Braintree"
         },
         "com.dengionline": {
             "form": {
-                "siteId": "ID сайта",
-                "salt": "\"Соль\" запроса"
+                "siteId": "Site ID",
+                "salt": "\"Salt\" of request"
             },
-            "name": "Деньги Online"
+            "name": "Dengi Online"
         },
         "com.ewaypayments": {
             "form": {
@@ -33,15 +33,15 @@
         },
         "com.mercadopago": {
             "form": {
-                "clientId": "Client ID",
-                "clientSecret": "Client Secret"
+                "clientId": "ID do cliente",
+                "clientSecret": "Senha do cliente"
             },
             "name": "MercadoPago"
         },
         "com.mercurypay": {
             "form": {
                 "merchantId": "Merchant ID",
-                "password": "Password"
+                "password": "Senha"
             },
             "name": "Mercury"
         },
@@ -55,14 +55,14 @@
             "form": {
                 "site": "Site Number",
                 "rang": "Bank Number",
-                "cle": "Password"
+                "cle": "Senha"
             },
             "name": "PayBox"
         },
         "com.paymentexpress": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Nome de usuário",
+                "password": "Senha"
             },
             "name": "Payment Express"
         },
@@ -76,8 +76,8 @@
         "com.pelecard": {
             "form": {
                 "terminalNumber": "Terminal Number",
-                "user": "User",
-                "password": "Password",
+                "user": "Usuário",
+                "password": "Senha",
                 "shopNumber": "Shop Number"
             },
             "name": "Pelecard"
@@ -90,7 +90,7 @@
         },
         "com.tranzila": {
             "form": {
-                "username": "Username"
+                "username": "Nome de usuário"
             },
             "name": "Tranzila"
         },
@@ -110,8 +110,8 @@
         }
     },
     "methods": {
-        "cash": "Наличные",
+        "cash": "Dinheiro",
         "com.cellarix": "Cellarix",
-        "credit": "Карты"
+        "credit": "Cartões"
     }
 }

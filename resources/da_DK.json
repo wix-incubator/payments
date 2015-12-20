@@ -2,46 +2,46 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Brugernavn",
+                "password": "Adgangskode"
             },
             "name": "Fat Zebra"
         },
         "com.braintreegateway": {
             "form": {
-                "merchantId": "Merchant ID",
+                "merchantId": "Sælger-id",
                 "publicKey": "Public Key",
                 "privateKey": "Private Key",
-                "currency": "Currency",
-                "merchantAccountId": "Merchant Account ID"
+                "currency": "Valuta",
+                "merchantAccountId": "Sælgerkonto-id"
             },
             "name": "Braintree"
         },
         "com.dengionline": {
             "form": {
-                "siteId": "ID сайта",
-                "salt": "\"Соль\" запроса"
+                "siteId": "Site ID",
+                "salt": "\"Salt\" of request"
             },
-            "name": "Деньги Online"
+            "name": "Dengi Online"
         },
         "com.ewaypayments": {
             "form": {
-                "customerId": "Customer ID",
-                "refundPwd": "Refund Password"
+                "customerId": "Kunde-ID",
+                "refundPwd": "Refusion adgangskode"
             },
             "name": "eWAY"
         },
         "com.mercadopago": {
             "form": {
-                "clientId": "Client ID",
+                "clientId": "Kunde-id",
                 "clientSecret": "Client Secret"
             },
             "name": "MercadoPago"
         },
         "com.mercurypay": {
             "form": {
-                "merchantId": "Merchant ID",
-                "password": "Password"
+                "merchantId": "Sælger-id",
+                "password": "Adgangskode"
             },
             "name": "Mercury"
         },
@@ -55,14 +55,14 @@
             "form": {
                 "site": "Site Number",
                 "rang": "Bank Number",
-                "cle": "Password"
+                "cle": "Adgangskode"
             },
             "name": "PayBox"
         },
         "com.paymentexpress": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Brugernavn",
+                "password": "Adgangskode"
             },
             "name": "Payment Express"
         },
@@ -75,43 +75,43 @@
         },
         "com.pelecard": {
             "form": {
-                "terminalNumber": "Terminal Number",
-                "user": "User",
-                "password": "Password",
-                "shopNumber": "Shop Number"
+                "terminalNumber": "Terminalnummer",
+                "user": "Bruger",
+                "password": "Adgangskode",
+                "shopNumber": "Shopnummer"
             },
             "name": "Pelecard"
         },
         "com.stripe": {
             "form": {
-                "apiKey": "API Key"
+                "apiKey": "API-key"
             },
             "name": "Stripe"
         },
         "com.tranzila": {
             "form": {
-                "username": "Username"
+                "username": "Brugernavn"
             },
             "name": "Tranzila"
         },
         "com.worldpay": {
             "form": {
-                "merchantCode": "Merchant Code",
-                "merchantPassword": "Merchant Password"
+                "merchantCode": "Sælgerkode",
+                "merchantPassword": "Sælgeradgangskode"
             },
             "name": "WorldPay"
         },
         "net.authorize": {
             "form": {
-                "login": "Login ID",
-                "transactionKey": "Transaction Key"
+                "login": "Login-id",
+                "transactionKey": "Transaction key"
             },
             "name": "Authorize.Net"
         }
     },
     "methods": {
-        "cash": "Наличные",
+        "cash": "Kontant",
         "com.cellarix": "Cellarix",
-        "credit": "Карты"
+        "credit": "Kredit- / Debitkort"
     }
 }

@@ -2,46 +2,46 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Felhasználói név",
+                "password": "Jelszó"
             },
             "name": "Fat Zebra"
         },
         "com.braintreegateway": {
             "form": {
-                "merchantId": "Merchant ID",
-                "publicKey": "Public Key",
-                "privateKey": "Private Key",
-                "currency": "Currency",
-                "merchantAccountId": "Merchant Account ID"
+                "merchantId": "Kereskedőazonosító",
+                "publicKey": "Nyilvános kulcs",
+                "privateKey": "Magánkulcs",
+                "currency": "Pénznem",
+                "merchantAccountId": "Kereskedői fiók azonosítója"
             },
             "name": "Braintree"
         },
         "com.dengionline": {
             "form": {
-                "siteId": "ID сайта",
-                "salt": "\"Соль\" запроса"
+                "siteId": "Webhely azonosítója",
+                "salt": "Különleges igény: só"
             },
-            "name": "Деньги Online"
+            "name": "Dengi Online"
         },
         "com.ewaypayments": {
             "form": {
-                "customerId": "Customer ID",
-                "refundPwd": "Refund Password"
+                "customerId": "Ügyfélazonosító",
+                "refundPwd": "Refund jelszó"
             },
             "name": "eWAY"
         },
         "com.mercadopago": {
             "form": {
-                "clientId": "Client ID",
+                "clientId": "Ügyfélazonosító",
                 "clientSecret": "Client Secret"
             },
             "name": "MercadoPago"
         },
         "com.mercurypay": {
             "form": {
-                "merchantId": "Merchant ID",
-                "password": "Password"
+                "merchantId": "Kereskedőazonosító",
+                "password": "Jelszó"
             },
             "name": "Mercury"
         },
@@ -53,65 +53,65 @@
         },
         "com.paybox": {
             "form": {
-                "site": "Site Number",
-                "rang": "Bank Number",
-                "cle": "Password"
+                "site": "Webhely száma",
+                "rang": "Bank száma",
+                "cle": "Jelszó"
             },
             "name": "PayBox"
         },
         "com.paymentexpress": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Felhasználói név",
+                "password": "Jelszó"
             },
             "name": "Payment Express"
         },
         "com.paypal": {
             "form": {
-                "clientId": "Client ID",
+                "clientId": "Ügyfélazonosító",
                 "secret": "Secret"
             },
             "name": "PayPal"
         },
         "com.pelecard": {
             "form": {
-                "terminalNumber": "Terminal Number",
-                "user": "User",
-                "password": "Password",
-                "shopNumber": "Shop Number"
+                "terminalNumber": "Terminál száma",
+                "user": "Felhasználó",
+                "password": "Jelszó",
+                "shopNumber": "Bolt száma"
             },
             "name": "Pelecard"
         },
         "com.stripe": {
             "form": {
-                "apiKey": "API Key"
+                "apiKey": "API kulcs"
             },
             "name": "Stripe"
         },
         "com.tranzila": {
             "form": {
-                "username": "Username"
+                "username": "Felhasználói név"
             },
             "name": "Tranzila"
         },
         "com.worldpay": {
             "form": {
-                "merchantCode": "Merchant Code",
-                "merchantPassword": "Merchant Password"
+                "merchantCode": "Kereskedő kódja",
+                "merchantPassword": "Kereskedő jelszava"
             },
             "name": "WorldPay"
         },
         "net.authorize": {
             "form": {
-                "login": "Login ID",
-                "transactionKey": "Transaction Key"
+                "login": "Bejelentkezési azonosító",
+                "transactionKey": "Tranzakció kulcsa"
             },
             "name": "Authorize.Net"
         }
     },
     "methods": {
-        "cash": "Наличные",
+        "cash": "Készpénz",
         "com.cellarix": "Cellarix",
-        "credit": "Карты"
+        "credit": "Kártyák"
     }
 }
