@@ -12,7 +12,7 @@ module.exports = {
 	// @see https://www.paymentexpress.com/Knowledge_Base/Bank_Guides
     countries : [
         "AU", "BD", "BN", "CA", "GB", "HK", "IE", "IN", "MO", "MY",
-		"SG", "US", "ZA"
+        "NZ", "SG", "US", "ZA"
     ],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,
