@@ -9,7 +9,8 @@ module.exports = {
     ],
 
     countries : [
-        "AU", "GB", "US"
+        "BE", "CH", "DE", "DK", "ES", "FI", "FR", "GB", "HK", "IE",
+        "IT", "LU", "NL", "NO", "SE", "SG", "US"
     ],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,
