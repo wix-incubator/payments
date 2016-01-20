@@ -20,9 +20,9 @@
         "com.dengionline": {
             "form": {
                 "siteId": "ID сайта",
-                "salt": "\"Соль\" запроса"
+                "salt": "\"Salt\" of request"
             },
-            "name": "Деньги Online"
+            "name": "Dengi Online"
         },
         "com.ewaypayments": {
             "form": {
@@ -110,8 +110,8 @@
         }
     },
     "methods": {
-        "cash": "Наличные",
+        "cash": "Наличными",
         "com.cellarix": "Cellarix",
-        "credit": "Карты"
+        "credit": "Картой"
     }
 }

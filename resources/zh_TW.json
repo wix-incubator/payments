@@ -2,20 +2,20 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "用戶名",
+                "password": "密碼"
             },
-            "name": "Fat Zebra"
+            "name": " Fat Zebra 卡 "
         },
         "com.braintreegateway": {
             "form": {
                 "merchantId": "Merchant ID",
-                "publicKey": "Public Key",
-                "privateKey": "Private Key",
-                "currency": "Currency",
+                "publicKey": "公鑰",
+                "privateKey": "私鑰",
+                "currency": "幣種",
                 "merchantAccountId": "Merchant Account ID"
             },
-            "name": "Braintree"
+            "name": " Braintree"
         },
         "com.dengionline": {
             "form": {
@@ -27,7 +27,7 @@
         "com.ewaypayments": {
             "form": {
                 "customerId": "Customer ID",
-                "refundPwd": "Refund Password"
+                "refundPwd": "退款密碼"
             },
             "name": "eWAY"
         },
@@ -36,12 +36,12 @@
                 "clientId": "Client ID",
                 "clientSecret": "Client Secret"
             },
-            "name": "MercadoPago"
+            "name": "MercadoPago<!--EndFragment--> 密碼"
         },
         "com.mercurypay": {
             "form": {
                 "merchantId": "Merchant ID",
-                "password": "Password"
+                "password": "密碼"
             },
             "name": "Mercury"
         },
@@ -55,16 +55,16 @@
             "form": {
                 "site": "Site Number",
                 "rang": "Bank Number",
-                "cle": "Password"
+                "cle": "密碼"
             },
             "name": "PayBox"
         },
         "com.paymentexpress": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "用戶名",
+                "password": "密碼"
             },
-            "name": "Payment Express"
+            "name": " Payment Express "
         },
         "com.paypal": {
             "form": {
@@ -76,9 +76,9 @@
         "com.pelecard": {
             "form": {
                 "terminalNumber": "Terminal Number",
-                "user": "User",
-                "password": "Password",
-                "shopNumber": "Shop Number"
+                "user": "用戶",
+                "password": "密碼",
+                "shopNumber": " Shop Number "
             },
             "name": "Pelecard"
         },
@@ -90,7 +90,7 @@
         },
         "com.tranzila": {
             "form": {
-                "username": "Username"
+                "username": "用戶名"
             },
             "name": "Tranzila"
         },
@@ -103,15 +103,15 @@
         },
         "net.authorize": {
             "form": {
-                "login": "Login ID",
-                "transactionKey": "Transaction Key"
+                "login": "登錄 ID ",
+                "transactionKey": "交易秘鑰"
             },
             "name": "Authorize.Net"
         }
     },
     "methods": {
-        "cash": "Cash",
+        "cash": "現金",
         "com.cellarix": "Cellarix",
-        "credit": "Cards"
+        "credit": "現金"
     }
 }

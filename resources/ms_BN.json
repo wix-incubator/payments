@@ -110,8 +110,8 @@
         }
     },
     "methods": {
-        "cash": "Cash",
+        "cash": "Tunai",
         "com.cellarix": "Cellarix",
-        "credit": "Cards"
+        "credit": "Kad"
     }
 }

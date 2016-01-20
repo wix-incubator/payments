@@ -2,32 +2,32 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "用户名",
+                "password": "密码"
             },
-            "name": "Fat Zebra"
+            "name": "Fat Zebra 卡"
         },
         "com.braintreegateway": {
             "form": {
                 "merchantId": "Merchant ID",
-                "publicKey": "Public Key",
-                "privateKey": "Private Key",
-                "currency": "Currency",
+                "publicKey": "公钥",
+                "privateKey": "私钥",
+                "currency": "币种",
                 "merchantAccountId": "Merchant Account ID"
             },
             "name": "Braintree"
         },
         "com.dengionline": {
             "form": {
-                "siteId": "Site ID",
+                "siteId": "站点 ID",
                 "salt": "\"Salt\" of request"
             },
             "name": "Dengi Online"
         },
         "com.ewaypayments": {
             "form": {
-                "customerId": "Customer ID",
-                "refundPwd": "Refund Password"
+                "customerId": "客户 ID",
+                "refundPwd": "退款密码"
             },
             "name": "eWAY"
         },
@@ -40,8 +40,8 @@
         },
         "com.mercurypay": {
             "form": {
-                "merchantId": "Merchant ID",
-                "password": "Password"
+                "merchantId": "商户 ID",
+                "password": "密码"
             },
             "name": "Mercury"
         },
@@ -55,14 +55,14 @@
             "form": {
                 "site": "Site Number",
                 "rang": "Bank Number",
-                "cle": "Password"
+                "cle": "密码"
             },
             "name": "PayBox"
         },
         "com.paymentexpress": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "用户名",
+                "password": "密码"
             },
             "name": "Payment Express"
         },
@@ -75,9 +75,9 @@
         },
         "com.pelecard": {
             "form": {
-                "terminalNumber": "Terminal Number",
-                "user": "User",
-                "password": "Password",
+                "terminalNumber": "终端号",
+                "user": "用户",
+                "password": "密码",
                 "shopNumber": "Shop Number"
             },
             "name": "Pelecard"
@@ -90,28 +90,28 @@
         },
         "com.tranzila": {
             "form": {
-                "username": "Username"
+                "username": "用户名"
             },
             "name": "Tranzila"
         },
         "com.worldpay": {
             "form": {
-                "merchantCode": "Merchant Code",
-                "merchantPassword": "Merchant Password"
+                "merchantCode": "商户代码",
+                "merchantPassword": "商户密码"
             },
             "name": "WorldPay"
         },
         "net.authorize": {
             "form": {
-                "login": "Login ID",
-                "transactionKey": "Transaction Key"
+                "login": "登录 ID",
+                "transactionKey": "交易秘钥"
             },
             "name": "Authorize.Net"
         }
     },
     "methods": {
-        "cash": "Cash",
+        "cash": "现金",
         "com.cellarix": "Cellarix",
-        "credit": "Cards"
+        "credit": "支付卡"
     }
 }

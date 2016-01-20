@@ -2,46 +2,46 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Nume de utilizator",
+                "password": "Parolă"
             },
             "name": "Fat Zebra"
         },
         "com.braintreegateway": {
             "form": {
-                "merchantId": "Merchant ID",
-                "publicKey": "Public Key",
-                "privateKey": "Private Key",
-                "currency": "Currency",
-                "merchantAccountId": "Merchant Account ID"
+                "merchantId": "ID comerciant",
+                "publicKey": "Cheie publică",
+                "privateKey": "Cheie privată",
+                "currency": "Monedă",
+                "merchantAccountId": "ID cont comerciant"
             },
             "name": "Braintree"
         },
         "com.dengionline": {
             "form": {
-                "siteId": "Site ID",
-                "salt": "\"Salt\" of request"
+                "siteId": "ID site",
+                "salt": "\"Salt\" cerere"
             },
             "name": "Dengi Online"
         },
         "com.ewaypayments": {
             "form": {
-                "customerId": "Customer ID",
-                "refundPwd": "Refund Password"
+                "customerId": "ID client",
+                "refundPwd": "Parolă rambursare"
             },
             "name": "eWAY"
         },
         "com.mercadopago": {
             "form": {
-                "clientId": "Client ID",
-                "clientSecret": "Client Secret"
+                "clientId": "ID client",
+                "clientSecret": "Secret client"
             },
             "name": "MercadoPago"
         },
         "com.mercurypay": {
             "form": {
-                "merchantId": "Merchant ID",
-                "password": "Password"
+                "merchantId": "ID comerciant",
+                "password": "Parolă"
             },
             "name": "Mercury"
         },
@@ -53,65 +53,65 @@
         },
         "com.paybox": {
             "form": {
-                "site": "Site Number",
-                "rang": "Bank Number",
-                "cle": "Password"
+                "site": "Număr site",
+                "rang": "Număr bancar",
+                "cle": "Parolă"
             },
             "name": "PayBox"
         },
         "com.paymentexpress": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Nume de utilizator",
+                "password": "Parolă"
             },
             "name": "Payment Express"
         },
         "com.paypal": {
             "form": {
-                "clientId": "Client ID",
+                "clientId": "ID client",
                 "secret": "Secret"
             },
             "name": "PayPal"
         },
         "com.pelecard": {
             "form": {
-                "terminalNumber": "Terminal Number",
-                "user": "User",
-                "password": "Password",
-                "shopNumber": "Shop Number"
+                "terminalNumber": "Număr terminal",
+                "user": "Utilizator",
+                "password": "Parolă",
+                "shopNumber": "Număr magazin"
             },
             "name": "Pelecard"
         },
         "com.stripe": {
             "form": {
-                "apiKey": "API Key"
+                "apiKey": "Cheie API"
             },
             "name": "Stripe"
         },
         "com.tranzila": {
             "form": {
-                "username": "Username"
+                "username": "Nume de utilizator"
             },
             "name": "Tranzila"
         },
         "com.worldpay": {
             "form": {
-                "merchantCode": "Merchant Code",
-                "merchantPassword": "Merchant Password"
+                "merchantCode": "Cod de comerciant",
+                "merchantPassword": "Parolă de comerciant"
             },
             "name": "WorldPay"
         },
         "net.authorize": {
             "form": {
-                "login": "Login ID",
-                "transactionKey": "Transaction Key"
+                "login": "ID de conectare",
+                "transactionKey": "Cheia tranzacției"
             },
             "name": "Authorize.Net"
         }
     },
     "methods": {
-        "cash": "Cash",
+        "cash": "Numerar",
         "com.cellarix": "Cellarix",
-        "credit": "Cards"
+        "credit": "Carduri bancare"
     }
 }

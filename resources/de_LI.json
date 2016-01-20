@@ -2,46 +2,46 @@
     "gateways": {
         "au.com.fatzebra": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Benutzername",
+                "password": "Passwort"
             },
             "name": "Fat Zebra"
         },
         "com.braintreegateway": {
             "form": {
-                "merchantId": "Merchant ID",
+                "merchantId": "Händler-ID",
                 "publicKey": "Public Key",
                 "privateKey": "Private Key",
-                "currency": "Currency",
-                "merchantAccountId": "Merchant Account ID"
+                "currency": "Währung",
+                "merchantAccountId": "Händlerkonto-ID"
             },
             "name": "Braintree"
         },
         "com.dengionline": {
             "form": {
-                "siteId": "Site ID",
+                "siteId": "Website-ID",
                 "salt": "\"Salt\" of request"
             },
             "name": "Dengi Online"
         },
         "com.ewaypayments": {
             "form": {
-                "customerId": "Customer ID",
+                "customerId": "Kunden-ID",
                 "refundPwd": "Refund Password"
             },
             "name": "eWAY"
         },
         "com.mercadopago": {
             "form": {
-                "clientId": "Client ID",
-                "clientSecret": "Client Secret"
+                "clientId": "Kunden-ID",
+                "clientSecret": "Kunden-Passwort"
             },
             "name": "MercadoPago"
         },
         "com.mercurypay": {
             "form": {
-                "merchantId": "Merchant ID",
-                "password": "Password"
+                "merchantId": "Händler-ID",
+                "password": "Passwort"
             },
             "name": "Mercury"
         },
@@ -53,65 +53,65 @@
         },
         "com.paybox": {
             "form": {
-                "site": "Site Number",
-                "rang": "Bank Number",
-                "cle": "Password"
+                "site": "Website-Nummer",
+                "rang": "Banknummer",
+                "cle": "Passwort"
             },
             "name": "PayBox"
         },
         "com.paymentexpress": {
             "form": {
-                "username": "Username",
-                "password": "Password"
+                "username": "Benutzername",
+                "password": "Passwort"
             },
             "name": "Payment Express"
         },
         "com.paypal": {
             "form": {
-                "clientId": "Client ID",
-                "secret": "Secret"
+                "clientId": "Kunden-ID",
+                "secret": "Passwort"
             },
             "name": "PayPal"
         },
         "com.pelecard": {
             "form": {
-                "terminalNumber": "Terminal Number",
-                "user": "User",
-                "password": "Password",
-                "shopNumber": "Shop Number"
+                "terminalNumber": "Terminal-Nummer",
+                "user": "Benutzer",
+                "password": "Passwort",
+                "shopNumber": "Shop-Nummer"
             },
             "name": "Pelecard"
         },
         "com.stripe": {
             "form": {
-                "apiKey": "API Key"
+                "apiKey": "API-Nummer"
             },
             "name": "Stripe"
         },
         "com.tranzila": {
             "form": {
-                "username": "Username"
+                "username": "Benutzername"
             },
             "name": "Tranzila"
         },
         "com.worldpay": {
             "form": {
-                "merchantCode": "Merchant Code",
-                "merchantPassword": "Merchant Password"
+                "merchantCode": "Händler-Code",
+                "merchantPassword": "Händler-Passwort"
             },
             "name": "WorldPay"
         },
         "net.authorize": {
             "form": {
-                "login": "Login ID",
-                "transactionKey": "Transaction Key"
+                "login": "Anmeldung-ID",
+                "transactionKey": "Transaktionsschlüssel"
             },
             "name": "Authorize.Net"
         }
     },
     "methods": {
-        "cash": "Cash",
+        "cash": "Barzahlung",
         "com.cellarix": "Cellarix",
-        "credit": "Cards"
+        "credit": "Keditkarten"
     }
 }
