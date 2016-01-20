@@ -19,6 +19,8 @@ module.exports = {
 		"LV", "MC", "MT", "MY", "NL", "NO", "NZ", "PL", "PT", "RO",
 		"SE", "SG", "SI", "SK", "SM", "TR", "US"
     ],
+	
+	fields: [],
 
     formValuesToMerchant : adapters.braintreeFormValuesToMerchant,
     merchantToFormValues : adapters.braintreeMerchantToFormValues,

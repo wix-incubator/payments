@@ -12,6 +12,8 @@ module.exports = {
         "AT", "AU", "BE", "CA", "CH", "DE", "DK", "ES", "FI", "FR",
 		"GB", "IE", "JP", "IT", "LU", "MX", "NL", "NO", "SE", "US"
     ],
+	
+	fields: [],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,
     merchantToFormValues : adapters.simpleMerchantToFormValues,

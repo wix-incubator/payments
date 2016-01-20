@@ -11,6 +11,8 @@ module.exports = {
     countries : [
         "AU",
     ],
+	
+	fields: ["holderName"],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,
     merchantToFormValues : adapters.simpleMerchantToFormValues,

@@ -12,6 +12,8 @@ module.exports = {
     countries : [
         "AR", "BR", "CL", "CO", "MX", "VE"
     ],
+	
+	fields: ["holderName", "holderId", "csc"],
 
     formValuesToMerchant : adapters.simpleFormValuesToMerchant,
     merchantToFormValues : adapters.simpleMerchantToFormValues,
