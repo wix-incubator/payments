@@ -1,6 +1,6 @@
 {
   "name": "payments",
-  "version": "0.0.10",
+  "version": "1.0.0",
   "description": "Lists various payment methods. Used by Wix Restaurants for payment configuration.",
   "main": "index.js",
   "scripts": {
