@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "make test",
-    "build-langs": "node tools/langs_builder.js"
+    "build-langs": "node tools/langs_builder.js",
+    "prepublish": "npm test",
+    "build": ":",
+    "release": "wnpm-release -- --no-shrinkwrap"
   },
   "repository": {
     "type": "git",
@@ -31,7 +34,8 @@
     "mocha": "^2.2.1",
     "q": "^1.4.1",
     "recursive-readdir": "^1.2.1",
-    "restaurants-i18n-builder": "^1.0.13"
+    "@wix/restaurants-i18n-builder": "*",
+    "@wix/wnpm-ci": "*"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
