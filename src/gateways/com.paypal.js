@@ -10,7 +10,7 @@ module.exports = {
 
 	// @see https://developer.paypal.com/docs/integration/direct/rest_api_payment_country_currency_support/#direct-credit-card-payments
     countries : [
-        "GB", "US"
+        "CA", "GB", "US"
     ],
 	
 	fields: [],
