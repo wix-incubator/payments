@@ -16,6 +16,7 @@ var gatewaysList = [
     require("./gateways/com.stripe"),
     require("./gateways/com.tranzila"),
     require("./gateways/com.worldpay"),
+    require("./gateways/il.co.creditguard"),
     require("./gateways/net.authorize"),
 ]
 
