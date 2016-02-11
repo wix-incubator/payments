@@ -11,7 +11,7 @@ var gatewaysList = [
     require("./gateways/com.paguelofacil"),
     require("./gateways/com.paybox"),
     require("./gateways/com.paymentexpress"),
-    require("./gateways/com.paypal"),
+//    require("./gateways/com.paypal"), // PayPal changed their interface, we need to adapt
     require("./gateways/com.pelecard"),
     require("./gateways/com.stripe"),
     require("./gateways/com.tranzila"),
