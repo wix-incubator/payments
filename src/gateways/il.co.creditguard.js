@@ -6,7 +6,8 @@ module.exports = {
     form : [
         {type : "string", name : "user"},
         {type : "string", name : "password"},
-        {type : "string", name : "terminalNumber"}
+        {type : "string", name : "terminalNumber"},
+        {type : "string", name : "supplierNumber"}
     ],
 
     countries : [
