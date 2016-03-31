@@ -1,22 +1,22 @@
-var adapters = require("../adapters.js");
+import { simpleFormValuesToMerchant, simpleMerchantToFormValues } from '../adapters.js';
 
 module.exports = {
-    id : "com.stripe",
+    id : 'com.stripe',
 
     form : [
-        {type : "string", name : "apiKey"},
+        {type : 'string', name : 'apiKey'},
     ],
 
 	// @see https://stripe.com/global
     countries : [
-        "AT", "AU", "BE", "CA", "CH", "DE", "DK", "ES", "FI", "FR",
-		"GB", "IE", "JP", "IT", "LU", "MX", "NL", "NO", "SE", "US"
+        'AT', 'AU', 'BE', 'CA', 'CH', 'DE', 'DK', 'ES', 'FI', 'FR',
+		'GB', 'IE', 'JP', 'IT', 'LU', 'MX', 'NL', 'NO', 'SE', 'US'
     ],
 	
 	fields: [],
 
-    formValuesToMerchant : adapters.simpleFormValuesToMerchant,
-    merchantToFormValues : adapters.simpleMerchantToFormValues,
+    formValuesToMerchant : simpleFormValuesToMerchant,
+    merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
 };

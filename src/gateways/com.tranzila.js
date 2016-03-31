@@ -1,20 +1,20 @@
-var adapters = require("../adapters.js");
+import { simpleFormValuesToMerchant, simpleMerchantToFormValues } from '../adapters.js';
 
 module.exports = {
-    id : "com.tranzila",
+    id : 'com.tranzila',
 
     form : [
-        {type : "string", name : "username"},
+        {type : 'string', name : 'username'},
     ],
 
     countries : [
-        "IL",
+        'IL',
     ],
 	
 	fields: [],
 
-    formValuesToMerchant : adapters.simpleFormValuesToMerchant,
-    merchantToFormValues : adapters.simpleMerchantToFormValues,
+    formValuesToMerchant : simpleFormValuesToMerchant,
+    merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
 };

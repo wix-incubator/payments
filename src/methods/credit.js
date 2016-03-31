@@ -1,3 +1,1 @@
-module.exports = {
-    id : "credit",
-};
+export const id = 'credit';

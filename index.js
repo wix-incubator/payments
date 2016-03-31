@@ -1,2 +1,7 @@
-exports.Gateways = require("./src/gateways.js");
-exports.Methods  = require("./src/methods.js");
+import * as Methods  from './src/methods';
+import * as Gateways from './src/gateways';
+
+export {
+	Methods,
+	Gateways,
+};

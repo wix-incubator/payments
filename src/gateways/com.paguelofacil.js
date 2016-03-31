@@ -1,20 +1,20 @@
-var adapters = require("../adapters.js");
+import { simpleFormValuesToMerchant, simpleMerchantToFormValues } from '../adapters.js';
 
 module.exports = {
-    id : "com.paguelofacil",
+    id : 'com.paguelofacil',
 
     form : [
-        {type : "string", name : "cclw"},
+        {type : 'string', name : 'cclw'},
     ],
 
     countries : [
-        "PA"
+        'PA'
     ],
 	
-	fields: ["holderName", "csc"],
+	fields: ['holderName', 'csc'],
 
-    formValuesToMerchant : adapters.simpleFormValuesToMerchant,
-    merchantToFormValues : adapters.simpleMerchantToFormValues,
+    formValuesToMerchant : simpleFormValuesToMerchant,
+    merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
 };

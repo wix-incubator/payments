@@ -1,22 +1,22 @@
-var adapters = require("../adapters.js");
+import { simpleFormValuesToMerchant, simpleMerchantToFormValues } from '../adapters.js';
 
 module.exports = {
-    id : "com.paybox",
+    id : 'com.paybox',
 
     form : [
-        {type : "string", name : "site"},
-        {type : "string", name : "rang"},
-        {type : "string", name : "cle"},
+        {type : 'string', name : 'site'},
+        {type : 'string', name : 'rang'},
+        {type : 'string', name : 'cle'},
     ],
 
     countries : [
-        "BE", "FR", "NL"
+        'BE', 'FR', 'NL'
     ],
 	
-	fields: ["csc"],
+	fields: ['csc'],
 
-    formValuesToMerchant : adapters.simpleFormValuesToMerchant,
-    merchantToFormValues : adapters.simpleMerchantToFormValues,
+    formValuesToMerchant : simpleFormValuesToMerchant,
+    merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
 };

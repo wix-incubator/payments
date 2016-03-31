@@ -1,7 +1,4 @@
-module.exports = {
-    id : "com.cellarix",
-	
-    countries : [
-        "IL",
-    ],
-};
+export const id = 'com.cellarix';
+export const countries = [
+    'IL',
+];

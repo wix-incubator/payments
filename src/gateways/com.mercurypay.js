@@ -1,21 +1,21 @@
-var adapters = require("../adapters.js");
+import { simpleFormValuesToMerchant, simpleMerchantToFormValues } from '../adapters.js';
 
 module.exports = {
-    id : "com.mercurypay",
+    id : 'com.mercurypay',
 
     form : [
-        {type : "string", name : "merchantId"},
-        {type : "string", name : "password"},
+        {type : 'string', name : 'merchantId'},
+        {type : 'string', name : 'password'},
     ],
 
     countries : [
-        "US",
+        'US',
     ],
 	
 	fields: [],
 
-    formValuesToMerchant : adapters.simpleFormValuesToMerchant,
-    merchantToFormValues : adapters.simpleMerchantToFormValues,
+    formValuesToMerchant : simpleFormValuesToMerchant,
+    merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
 };

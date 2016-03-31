@@ -1,33 +1,28 @@
-var _ = require("lodash");
+import _ from 'lodash';
+import locales from './locales';
 
 // Methods
-var methodsList = [
-    require("./methods/cash"),
-    require("./methods/credit"),
-    require("./methods/com.cellarix"),
-]
+const methodsList = [
+    require('./methods/cash'),
+    require('./methods/credit'),
+    require('./methods/com.cellarix'),
+];
 
-var locales  = require("./locales");
-var methods = _.reduce(methodsList, function(methods, method) {methods[method.id] = method; return methods}, {});
+const methods = _.reduce(methodsList, (methods, method) => {methods[method.id] = method; return methods}, {});
 
+export const getMethodsForCountry = countryCode => _.reduce(methods, (rc, method) => {
+	if (_.isUndefined(method.countries) || _.contains(method.countries, countryCode)) {
+		rc.push(_.omit(method, 'countries'));
+	};
+	return rc;
+}, []);
 
-module.exports = {
-	getMethodsForCountry : function(countryCode) {
-		return _.reduce(methods, function(rc, method, id) {
-			if (_.isUndefined(method.countries) || _.contains(method.countries, countryCode)) {
-				rc.push(_.omit(method, "countries"));
-			};
-			return rc;
-		}, []);
-	},
-
-	getMethodDisplayName : function(locale, methodId) {
-		if (_.has(locales, locale)) {
-			var method = locales[locale].methods[methodId];
-			if (method) {
-				return method;
-			}
+export const getMethodDisplayName = (locale, methodId) => {
+	if (_.has(locales, locale)) {
+		const method = locales[locale].methods[methodId];
+		if (method) {
+			return method;
 		}
-		return "";
-	},
+	}
+	return '';
 };

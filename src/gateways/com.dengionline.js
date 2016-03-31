@@ -1,21 +1,21 @@
-var adapters = require("../adapters.js");
+import { simpleFormValuesToMerchant, simpleMerchantToFormValues } from '../adapters.js';
 
 module.exports = {
-    id : "com.dengionline",
+    id : 'com.dengionline',
 
     form : [
-        {type : "string", name : "siteId"},
-        {type : "string", name : "salt"},
+        {type : 'string', name : 'siteId'},
+        {type : 'string', name : 'salt'},
     ],
 
     countries : [
-        "RU"
+        'RU'
     ],
 	
-	fields: ["holderName", "csc"],
+	fields: ['holderName', 'csc'],
 
-    formValuesToMerchant : adapters.simpleFormValuesToMerchant,
-    merchantToFormValues : adapters.simpleMerchantToFormValues,
+    formValuesToMerchant : simpleFormValuesToMerchant,
+    merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
 };

@@ -1,23 +1,23 @@
-var adapters = require("../adapters.js");
+import { simpleFormValuesToMerchant, simpleMerchantToFormValues } from '../adapters.js';
 
 module.exports = {
-    id : "com.pelecard",
+    id : 'com.pelecard',
 
     form : [
-        {type : "string", name : "terminalNumber"},
-        {type : "string", name : "user"},
-        {type : "string", name : "password"},
-        {type : "string", name : "shopNumber"},
+        {type : 'string', name : 'terminalNumber'},
+        {type : 'string', name : 'user'},
+        {type : 'string', name : 'password'},
+        {type : 'string', name : 'shopNumber'},
     ],
 
     countries : [
-        "IL",
+        'IL',
     ],
 	
 	fields: [],
 
-    formValuesToMerchant : adapters.simpleFormValuesToMerchant,
-    merchantToFormValues : adapters.simpleMerchantToFormValues,
+    formValuesToMerchant : simpleFormValuesToMerchant,
+    merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
 };
