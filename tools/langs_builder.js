@@ -1,14 +1,15 @@
 var GitToI18NGenerator = require('@wix/restaurants-i18n-builder').GitToI18NGenerator;
-var fs_extra = require('fs-extra');
 var gift = require('gift');
 var path = require('path');
 var os = require('os');
-var fs = require('fs');
+var fs = require('fs-extra');
 var Q = require('q');
 var _ = require('lodash');
 
 
 Q().then(function() {
+    return fs.mkdirsSync(path.join(__dirname, '..', 'resources'));
+}).then(function() {
     return GitToI18NGenerator.default.generate({gitProjectPath : './node_modules/@wix/payments-langs'});
 }).then(function(results) {
     // Break down the object into tokens only
