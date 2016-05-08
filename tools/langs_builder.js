@@ -10,7 +10,7 @@ var _ = require('lodash');
 Q().then(function() {
     return fs.mkdirsSync(path.join(__dirname, '..', 'resources'));
 }).then(function() {
-    return GitToI18NGenerator.default.generate({gitProjectPath : './node_modules/@wix/payments-langs'});
+    return GitToI18NGenerator.generate({gitProjectPath : './node_modules/@wix/payments-langs'});
 }).then(function(results) {
     // Break down the object into tokens only
     var tokens = {};

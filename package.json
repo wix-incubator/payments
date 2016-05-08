@@ -4,8 +4,9 @@
   "description": "Lists various payment methods. Used by Wix Restaurants for payment configuration.",
   "main": "dist/index.js",
   "scripts": {
+    "prepublish": "node tools/langs_builder.js && npm test && npm run compile",
     "test": "mocha --compilers js:babel-register",
-    "prepublish": "node tools/langs_builder.js && npm test && webpack",
+    "compile": "babel -d dist/ src/",
     "build": ":",
     "release": "wnpm-release -- --no-shrinkwrap"
   },
@@ -31,19 +32,19 @@
     "@wix/restaurants-i18n-builder": "*",
     "@wix/wnpm-ci": "*",
     "babel": "^6.5.2",
-    "babel-core": "^6.7.4",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-transform-strict-mode": "^6.6.5",
+    "babel-cli": "^6.8.0",
+    "babel-plugin-transform-runtime": "^6.8.0",
     "babel-preset-es2015": "^6.6.0",
-    "babel-register": "^6.7.2",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "babel-register": "^6.8.0",
+    "babel-runtime": "^6.6.1",
     "chai": "^3.5.0",
     "fs-extra": "^0.18.3",
     "gift": "^0.6.0",
-    "json-loader": "^0.5.4",
     "lodash": "^3.8.0",
     "mocha": "^2.4.5",
-    "q": "^1.4.1",
-    "webpack": "^1.12.0"
+    "q": "^1.4.1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
