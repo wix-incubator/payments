@@ -5,7 +5,6 @@ module.exports = {
 
     form : [
         {type : 'string', name : 'customerId'},
-        {type : 'string', name : 'refundPwd'},
     ],
 
 	// @see List of countries in https://eway.io/
