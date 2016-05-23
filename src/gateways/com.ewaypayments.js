@@ -7,9 +7,9 @@ module.exports = {
         {type : 'string', name : 'customerId'},
     ],
 
-	// @see List of countries in https://eway.io/
+	// @see List of countries in https://eway.io/ (though some countries are not supported by the API version we use)
     countries : [
-        'AU', 'GB', 'HK', 'MY', 'NZ', 'SG'
+        'AU', 'HK', 'MY', 'NZ', 'SG'
     ],
 	
 	fields: [],
