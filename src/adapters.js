@@ -25,7 +25,7 @@ export const braintreeFormValuesToMerchant = formValues => {
 
 export const braintreeMerchantToFormValues = merchant => {
     const formValues                = simpleMerchantToFormValues(_.omit(merchant, 'merchantAccountIds'));
-    const firstMerchantAccountId    = _.chain(merchant.merchantAccountIds).pairs().first().value() || ['', ''];
+    const firstMerchantAccountId    = _.chain(merchant.merchantAccountIds).toPairs().first().value() || ['', ''];
     formValues['currency']          = firstMerchantAccountId[0];
     formValues['merchantAccountId'] = firstMerchantAccountId[1];
     return formValues;

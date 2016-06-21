@@ -1,5 +1,4 @@
 var GitToI18NGenerator = require('@wix/restaurants-i18n-builder').GitToI18NGenerator;
-var gift = require('gift');
 var path = require('path');
 var os = require('os');
 var fs = require('fs-extra');

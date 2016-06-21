@@ -11,7 +11,7 @@ const methodsList = [
 const methods = _.reduce(methodsList, (methods, method) => {methods[method.id] = method; return methods}, {});
 
 export const getMethodsForCountry = countryCode => _.reduce(methods, (rc, method) => {
-	if (_.isUndefined(method.countries) || _.contains(method.countries, countryCode)) {
+	if (_.isUndefined(method.countries) || _.includes(method.countries, countryCode)) {
 		rc.push(_.omit(method, 'countries'));
 	};
 	return rc;
