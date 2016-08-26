@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import locales from './locales';
 
 // Gateways
 const gatewaysList = [
@@ -31,22 +30,5 @@ export const getGatewaysForCountry = countryCode => _.reduce(gateways, (rc, gate
 	return rc;
 }, []);
 
-export const getGatewayDisplayName = (locale, gatewayId) => {
-	if (_.has(locales, locale)) {
-		const gw = locales[locale].gateways[gatewayId];
-		if (gw) {
-			return gw.name;
-		}
-	}
-	return '';
-};
-
-export const getGatewayFieldDisplayName = (locale, gatewayId, field) => {
-	if (_.has(locales, locale)) {
-		const gw = locales[locale].gateways[gatewayId];
-		if (gw) {
-			return gw.form[field];
-		}
-	}
-	return '';
-};
+export const getGatewayDisplayName = (i18nGet, gatewayId) => i18nGet(`gateway_${gatewayId}_title`);
+export const getGatewayFieldDisplayName = (i18nGet, gatewayId, field) => i18nGet(`gateway_${gatewayId}_field_${field}`);

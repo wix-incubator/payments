@@ -1,10 +1,10 @@
 {
   "name": "payments",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Lists various payment methods. Used by Wix Restaurants for payment configuration.",
   "main": "dist/index.js",
   "scripts": {
-    "prepublish": "node tools/langs_builder.js && npm test && npm run compile",
+    "prepublish": "npm test && npm run compile",
     "test": "mocha --compilers js:babel-register",
     "compile": "babel -d dist/ src/",
     "build": ":",
@@ -30,8 +30,6 @@
       "lodash": "^4.13.0"
   },
   "devDependencies": {
-    "@wix/payments-langs": "*",
-    "@wix/restaurants-i18n-builder": "*",
     "@wix/wnpm-ci": "*",
     "babel": "^6.5.2",
     "babel-cli": "^6.8.0",

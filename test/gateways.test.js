@@ -12,23 +12,14 @@ describe("Getting gateway by country tests", function() {
 });
 
 
-describe("English locale tests (en_US)", function() {
-    it ('returns "Braintree" for "com.braintreegateway" (gateway name)', function() {
-    	expect(gateways.getGatewayDisplayName("en_US", "com.braintreegateway")).to.equal("Braintree");
+describe("Locale tests", function() {
+    const i18nGet = (token) => token;
+    it ('returns "gateway_com.braintreegateway_title" for "com.braintreegateway" (gateway name)', function() {
+    	expect(gateways.getGatewayDisplayName(i18nGet, "com.braintreegateway")).to.equal("gateway_com.braintreegateway_title");
     });
 
-    it ('returns "Merchant ID" for Braintree "merchantId" (gateway field)', function() {
-    	expect(gateways.getGatewayFieldDisplayName("en_US", "com.braintreegateway", "merchantId")).to.equal("Merchant ID");
+    it ('returns "gateway_com.braintreegateway_field_merchantId" for Braintree "merchantId" (gateway field)', function() {
+    	expect(gateways.getGatewayFieldDisplayName(i18nGet, "com.braintreegateway", "merchantId")).to.equal("gateway_com.braintreegateway_field_merchantId");
     });
 
-});
-
-describe("Invalid locale tests (xx_XX)", function() {
-    it ('returns empty string for "com.braintreegateway" (gateway name)', function() {
-    	expect(gateways.getGatewayDisplayName("xx_XX", "com.braintreegateway")).to.equal("");
-    });
-
-    it ('returns empty string for Braintree "merchantId" (gateway field)', function() {
-    	expect(gateways.getGatewayFieldDisplayName("xx_XX", "com.braintreegateway", "merchantId")).to.equal("");
-    });    
 });

@@ -11,14 +11,9 @@ describe("Getting method by country tests", function() {
 });
 
 
-describe("English locale tests (en_US)", function() {
-    it ('returns "Cash" for "cash" (method name)', function() {
-    	expect(methods.getMethodDisplayName("en_US", "cash")).to.equal("Cash");
-    });
-});
-
-describe("Invalid locale tests (xx_XX)", function() {
-    it ('returns empty string for "cash" (method name)', function() {
-    	expect(methods.getMethodDisplayName("xx_XX", "cash")).to.equal("");
+describe("Locale tests)", function() {
+    const i18nGet = (token) => token;
+    it ('returns "method_cash_title" for "cash" (method name)', function() {
+    	expect(methods.getMethodDisplayName(i18nGet, "cash")).to.equal("method_cash_title");
     });
 });

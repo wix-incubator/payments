@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import locales from './locales';
 
 // Methods
 const methodsList = [
@@ -17,12 +16,4 @@ export const getMethodsForCountry = countryCode => _.reduce(methods, (rc, method
 	return rc;
 }, []);
 
-export const getMethodDisplayName = (locale, methodId) => {
-	if (_.has(locales, locale)) {
-		const method = locales[locale].methods[methodId];
-		if (method) {
-			return method;
-		}
-	}
-	return '';
-};
+export const getMethodDisplayName = (i18nGet, methodId) => i18nGet(`method_${methodId}_title`);
