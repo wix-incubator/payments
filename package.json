@@ -8,7 +8,7 @@
     "test": "mocha --compilers js:babel-register",
     "compile": "babel -d dist/ src/",
     "build": ":",
-    "release": "wnpm-release -- --no-shrinkwrap"
+    "release": "npm install @wix/wnpm-ci && wnpm-release -- --no-shrinkwrap"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,6 @@
       "lodash": "^4.13.0"
   },
   "devDependencies": {
-    "@wix/wnpm-ci": "*",
     "babel": "^6.5.2",
     "babel-cli": "^6.8.0",
     "babel-plugin-transform-runtime": "^6.8.0",
