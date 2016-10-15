@@ -7,13 +7,14 @@ module.exports = {
         {type : 'string', name : 'apiKey'},
     ],
 
-	// @see https://stripe.com/global
+    // @see https://stripe.com/global
     countries : [
-        'AT', 'AU', 'BE', 'CA', 'CH', 'DE', 'DK', 'ES', 'FI', 'FR',
-		'GB', 'IE', 'JP', 'IT', 'LU', 'MX', 'NL', 'NO', 'SE', 'US'
+        'AT', 'AU', 'BE', 'BR', 'CA', 'CH', 'DE', 'DK', 'ES', 'FI',
+        'FR', 'GB', 'HK', 'IE', 'IT', 'JP', 'LU', 'MX', 'NL', 'NO',
+        'NZ', 'PT', 'SE', 'SG', 'US'
     ],
 	
-	fields: [],
+    fields: [],
 
     formValuesToMerchant : simpleFormValuesToMerchant,
     merchantToFormValues : simpleMerchantToFormValues,
