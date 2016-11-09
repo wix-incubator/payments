@@ -30,5 +30,7 @@ export const getGatewaysForCountry = countryCode => _.reduce(gateways, (rc, gate
 	return rc;
 }, []);
 
+export const getGatewayById = gatewayId => _.find(gateways, {'id': gatewayId});
+
 export const getGatewayDisplayName = (i18nGet, gatewayId) => i18nGet(`gateway_${gatewayId}_title`);
 export const getGatewayFieldDisplayName = (i18nGet, gatewayId, field) => i18nGet(`gateway_${gatewayId}_field_${field}`);
