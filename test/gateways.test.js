@@ -11,6 +11,12 @@ describe("Getting gateway by country tests", function() {
     });
 });
 
+describe("Getting gateway by id tests", function() {
+	it ('returns the expected object when fetching eway', function() {
+		var gateway = gateways.getGatewayById("com.ewaypayments");
+		expect(gateway.id).to.equal("com.ewaypayments");
+	});
+});
 
 describe("Locale tests", function() {
     const i18nGet = (token) => token;

@@ -4,11 +4,12 @@
   "description": "Lists various payment methods. Used by Wix Restaurants for payment configuration.",
   "main": "dist/index.js",
   "scripts": {
-    "prepublish": "npm test && npm run compile",
     "test": "mocha --compilers js:babel-register",
     "compile": "babel -d dist/ src/",
-    "build": ":",
-    "release": "npm install @wix/wnpm-ci && wnpm-release -- --no-shrinkwrap"
+    "compile-library": "webpack --output-library PaymentsMethods --output-library-target var dist bin/payments.src.js",
+    "prepublish": "npm test && npm run compile && npm run compile-library",
+    "build": "babel bin/payments.src.js | uglifyjs > bin/payments.js",
+    "release": "npm install @wix/wnpm-ci && wnpm-release -- --no-shrinkwrap && npm install bower-auto-release && bower-auto-release --dist bin"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,10 @@
     "fs-extra": "^0.18.3",
     "mocha": "^2.4.5",
     "q": "^1.4.1"
+  },
+  "optionalDependencies": {
+    "uglifyjs": "^2.4.10",
+    "webpack": "^1.13.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
