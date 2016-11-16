@@ -120,7 +120,7 @@ var PaymentsMethods =
 	  var undefined;
 
 	  /** Used as the semantic version number. */
-	  var VERSION = '4.17.1';
+	  var VERSION = '4.17.2';
 
 	  /** Used as the size to enable large array optimizations. */
 	  var LARGE_ARRAY_SIZE = 200;
@@ -3913,7 +3913,7 @@ var PaymentsMethods =
 	            value = baseGet(object, path);
 
 	        if (predicate(value, path)) {
-	          baseSet(result, path, value);
+	          baseSet(result, castPath(path, object), value);
 	        }
 	      }
 	      return result;
@@ -3989,14 +3989,8 @@ var PaymentsMethods =
 	          var previous = index;
 	          if (isIndex(index)) {
 	            splice.call(array, index, 1);
-	          }
-	          else {
-	            var path = castPath(index, array),
-	                object = parent(array, path);
-
-	            if (object != null) {
-	              delete object[toKey(last(path))];
-	            }
+	          } else {
+	            baseUnset(array, index);
 	          }
 	        }
 	      }
@@ -4460,8 +4454,7 @@ var PaymentsMethods =
 	    function baseUnset(object, path) {
 	      path = castPath(path, object);
 	      object = parent(object, path);
-	      var key = toKey(last(path));
-	      return !(object != null && hasOwnProperty.call(object, key)) || delete object[key];
+	      return object == null || delete object[toKey(last(path))];
 	    }
 
 	    /**
@@ -10955,14 +10948,10 @@ var PaymentsMethods =
 	      start = start === undefined ? 0 : nativeMax(toInteger(start), 0);
 	      return baseRest(function(args) {
 	        var array = args[start],
-	            lastIndex = args.length - 1,
 	            otherArgs = castSlice(args, 0, start);
 
 	        if (array) {
 	          arrayPush(otherArgs, array);
-	        }
-	        if (start != lastIndex) {
-	          arrayPush(otherArgs, castSlice(args, start + 1));
 	        }
 	        return apply(func, this, otherArgs);
 	      });
@@ -13578,16 +13567,16 @@ var PaymentsMethods =
 	      if (object == null) {
 	        return result;
 	      }
-	      var bitmask = CLONE_FLAT_FLAG | CLONE_SYMBOLS_FLAG;
+	      var isDeep = false;
 	      paths = arrayMap(paths, function(path) {
 	        path = castPath(path, object);
-	        bitmask |= (path.length > 1 ? CLONE_DEEP_FLAG : 0);
+	        isDeep || (isDeep = path.length > 1);
 	        return path;
 	      });
-
 	      copyObject(object, getAllKeysIn(object), result);
-	      result = baseClone(result, bitmask);
-
+	      if (isDeep) {
+	        result = baseClone(result, CLONE_DEEP_FLAG | CLONE_FLAT_FLAG | CLONE_SYMBOLS_FLAG);
+	      }
 	      var length = paths.length;
 	      while (length--) {
 	        baseUnset(result, paths[length]);
@@ -13708,8 +13697,8 @@ var PaymentsMethods =
 
 	      // Ensure the loop is entered when path is empty.
 	      if (!length) {
-	        object = undefined;
 	        length = 1;
+	        object = undefined;
 	      }
 	      while (++index < length) {
 	        var value = object == null ? undefined : object[toKey(path[index])];
@@ -17244,7 +17233,7 @@ var PaymentsMethods =
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.getGatewayFieldDisplayName = exports.getGatewayDisplayName = exports.getGatewayById = exports.getGatewaysForCountry = undefined;
+	exports.getGatewayFieldDisplayName = exports.getGatewayDisplayName = exports.getGatewayById = exports.getGatewaysForCountry = exports.gateways = undefined;
 
 	var _lodash = __webpack_require__(2);
 
@@ -17255,7 +17244,7 @@ var PaymentsMethods =
 	// Gateways
 	var gatewaysList = [__webpack_require__(8), __webpack_require__(10), __webpack_require__(11), __webpack_require__(12), __webpack_require__(13), __webpack_require__(14), __webpack_require__(15), __webpack_require__(16), __webpack_require__(17), __webpack_require__(18), __webpack_require__(19), __webpack_require__(20), __webpack_require__(21), __webpack_require__(22), __webpack_require__(23), __webpack_require__(24)];
 
-	var gateways = _lodash2.default.reduce(gatewaysList, function (gateways, gateway) {
+	var gateways = exports.gateways = _lodash2.default.reduce(gatewaysList, function (gateways, gateway) {
 	  gateways[gateway.id] = gateway;return gateways;
 	}, {});
 
