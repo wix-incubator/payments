@@ -21,7 +21,7 @@ const gatewaysList = [
 ]
 
 
-const gateways = _.reduce(gatewaysList, (gateways, gateway) => {gateways[gateway.id] = gateway; return gateways}, {});
+export const gateways = _.reduce(gatewaysList, (gateways, gateway) => {gateways[gateway.id] = gateway; return gateways}, {});
 
 export const getGatewaysForCountry = countryCode => _.reduce(gateways, (rc, gateway) => {
 	if (_.includes(gateway.countries, countryCode)) {
