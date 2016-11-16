@@ -120,7 +120,7 @@ var PaymentsMethods =
 	  var undefined;
 
 	  /** Used as the semantic version number. */
-	  var VERSION = '4.17.0';
+	  var VERSION = '4.17.1';
 
 	  /** Used as the size to enable large array optimizations. */
 	  var LARGE_ARRAY_SIZE = 200;
@@ -3164,7 +3164,7 @@ var PaymentsMethods =
 	     * @returns {*} Returns the resolved value.
 	     */
 	    function baseGet(object, path) {
-	      path = isKey(path, object) ? [path] : castPath(path);
+	      path = castPath(path, object);
 
 	      var index = 0,
 	          length = path.length;
@@ -3350,12 +3350,9 @@ var PaymentsMethods =
 	     * @returns {*} Returns the result of the invoked method.
 	     */
 	    function baseInvoke(object, path, args) {
-	      if (!isKey(path, object)) {
-	        path = castPath(path);
-	        object = parent(object, path);
-	        path = last(path);
-	      }
-	      var func = object == null ? object : object[toKey(path)];
+	      path = castPath(path, object);
+	      object = parent(object, path);
+	      var func = object == null ? object : object[toKey(last(path))];
 	      return func == null ? undefined : apply(func, object, args);
 	    }
 
@@ -3993,16 +3990,13 @@ var PaymentsMethods =
 	          if (isIndex(index)) {
 	            splice.call(array, index, 1);
 	          }
-	          else if (!isKey(index, array)) {
-	            var path = castPath(index),
+	          else {
+	            var path = castPath(index, array),
 	                object = parent(array, path);
 
 	            if (object != null) {
 	              delete object[toKey(last(path))];
 	            }
-	          }
-	          else {
-	            delete array[toKey(index)];
 	          }
 	        }
 	      }
@@ -4123,7 +4117,7 @@ var PaymentsMethods =
 	      if (!isObject(object)) {
 	        return object;
 	      }
-	      path = isKey(path, object) ? [path] : castPath(path);
+	      path = castPath(path, object);
 
 	      var index = -1,
 	          length = path.length,
@@ -4464,9 +4458,8 @@ var PaymentsMethods =
 	     * @returns {boolean} Returns `true` if the property is deleted, else `false`.
 	     */
 	    function baseUnset(object, path) {
-	      path = isKey(path, object) ? [path] : castPath(path);
+	      path = castPath(path, object);
 	      object = parent(object, path);
-
 	      var key = toKey(last(path));
 	      return !(object != null && hasOwnProperty.call(object, key)) || delete object[key];
 	    }
@@ -4608,10 +4601,14 @@ var PaymentsMethods =
 	     *
 	     * @private
 	     * @param {*} value The value to inspect.
+	     * @param {Object} [object] The object to query keys on.
 	     * @returns {Array} Returns the cast property path array.
 	     */
-	    function castPath(value) {
-	      return isArray(value) ? value : stringToPath(value);
+	    function castPath(value, object) {
+	      if (isArray(value)) {
+	        return value;
+	      }
+	      return isKey(value, object) ? [value] : stringToPath(toString(value));
 	    }
 
 	    /**
@@ -6236,7 +6233,7 @@ var PaymentsMethods =
 	     * @returns {boolean} Returns `true` if `path` exists, else `false`.
 	     */
 	    function hasPath(object, path, hasFunc) {
-	      path = isKey(path, object) ? [path] : castPath(path);
+	      path = castPath(path, object);
 
 	      var index = -1,
 	          length = path.length,
@@ -6713,7 +6710,7 @@ var PaymentsMethods =
 	     * @returns {*} Returns the parent value.
 	     */
 	    function parent(object, path) {
-	      return path.length == 1 ? object : baseGet(object, baseSlice(path, 0, -1));
+	      return path.length < 2 ? object : baseGet(object, baseSlice(path, 0, -1));
 	    }
 
 	    /**
@@ -6853,8 +6850,6 @@ var PaymentsMethods =
 	     * @returns {Array} Returns the property path array.
 	     */
 	    var stringToPath = memoizeCapped(function(string) {
-	      string = toString(string);
-
 	      var result = [];
 	      if (reLeadingDot.test(string)) {
 	        result.push('');
@@ -9589,12 +9584,10 @@ var PaymentsMethods =
 	    var invokeMap = baseRest(function(collection, path, args) {
 	      var index = -1,
 	          isFunc = typeof path == 'function',
-	          isProp = isKey(path),
 	          result = isArrayLike(collection) ? Array(collection.length) : [];
 
 	      baseEach(collection, function(value) {
-	        var func = isFunc ? path : ((isProp && value != null) ? value[path] : undefined);
-	        result[++index] = func ? apply(func, value, args) : baseInvoke(value, path, args);
+	        result[++index] = isFunc ? apply(path, value, args) : baseInvoke(value, path, args);
 	      });
 	      return result;
 	    });
@@ -13585,8 +13578,15 @@ var PaymentsMethods =
 	      if (object == null) {
 	        return result;
 	      }
+	      var bitmask = CLONE_FLAT_FLAG | CLONE_SYMBOLS_FLAG;
+	      paths = arrayMap(paths, function(path) {
+	        path = castPath(path, object);
+	        bitmask |= (path.length > 1 ? CLONE_DEEP_FLAG : 0);
+	        return path;
+	      });
+
 	      copyObject(object, getAllKeysIn(object), result);
-	      result = baseClone(result, CLONE_DEEP_FLAG | CLONE_FLAT_FLAG | CLONE_SYMBOLS_FLAG);
+	      result = baseClone(result, bitmask);
 
 	      var length = paths.length;
 	      while (length--) {
@@ -13637,7 +13637,7 @@ var PaymentsMethods =
 	     * // => { 'a': 1, 'c': 3 }
 	     */
 	    var pick = flatRest(function(object, paths) {
-	      return object == null ? {} : basePick(object, arrayMap(paths, toKey));
+	      return object == null ? {} : basePick(object, paths);
 	    });
 
 	    /**
@@ -13659,7 +13659,16 @@ var PaymentsMethods =
 	     * // => { 'a': 1, 'c': 3 }
 	     */
 	    function pickBy(object, predicate) {
-	      return object == null ? {} : basePickBy(object, getAllKeysIn(object), getIteratee(predicate));
+	      if (object == null) {
+	        return {};
+	      }
+	      var props = arrayMap(getAllKeysIn(object), function(prop) {
+	        return [prop];
+	      });
+	      predicate = getIteratee(predicate);
+	      return basePickBy(object, props, function(value, path) {
+	        return predicate(value, path[0]);
+	      });
 	    }
 
 	    /**
@@ -13692,7 +13701,7 @@ var PaymentsMethods =
 	     * // => 'default'
 	     */
 	    function result(object, path, defaultValue) {
-	      path = isKey(path, object) ? [path] : castPath(path);
+	      path = castPath(path, object);
 
 	      var index = -1,
 	          length = path.length;
@@ -16210,7 +16219,7 @@ var PaymentsMethods =
 	      if (isArray(value)) {
 	        return arrayMap(value, toKey);
 	      }
-	      return isSymbol(value) ? [value] : copyArray(stringToPath(value));
+	      return isSymbol(value) ? [value] : copyArray(stringToPath(toString(value)));
 	    }
 
 	    /**
