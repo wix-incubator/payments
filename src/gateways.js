@@ -1,7 +1,4 @@
-var includes = require('lodash/fp/includes');
-var omit = require('lodash/fp/omit');
-var reduce = require('lodash/fp/reduce');
-var find = require('lodash/fp/find');
+import _ from 'lodash';
 
 // Gateways
 const gatewaysList = [
@@ -23,16 +20,17 @@ const gatewaysList = [
     require('./gateways/net.authorize'),
 ]
 
-export const gateways = reduce((gateways, gateway) => {gateways[gateway.id] = gateway; return gateways}, {})(gatewaysList);
 
-export const getGatewaysForCountry = countryCode => reduce((rc, gateway) => {
-	if (includes(countryCode)(gateway.countries)) {
-		rc.push(omit('countries')(gateway));
+export const gateways = _.reduce(gatewaysList, (gateways, gateway) => {gateways[gateway.id] = gateway; return gateways}, {});
+
+export const getGatewaysForCountry = countryCode => _.reduce(gateways, (rc, gateway) => {
+	if (_.includes(gateway.countries, countryCode)) {
+		rc.push(_.omit(gateway, 'countries'));
 	};
 	return rc;
-}, [])(gateways);
+}, []);
 
-export const getGatewayById = gatewayId => find({'id': gatewayId})(gateways);
+export const getGatewayById = gatewayId => _.find(gateways, {'id': gatewayId});
 
 export const getGatewayDisplayName = (i18nGet, gatewayId) => i18nGet(`gateway_${gatewayId}_title`);
 export const getGatewayFieldDisplayName = (i18nGet, gatewayId, field) => i18nGet(`gateway_${gatewayId}_field_${field}`);

@@ -1,6 +1,4 @@
-var includes = require('lodash/fp/includes');
-var reduce = require('lodash/fp/reduce');
-var omit = require('lodash/fp/omit');
+import _ from 'lodash';
 
 // Methods
 const methodsList = [
@@ -9,13 +7,13 @@ const methodsList = [
     require('./methods/com.cellarix'),
 ];
 
-const methods = reduce((methods, method) => {methods[method.id] = method; return methods}, {})(methodsList);
+const methods = _.reduce(methodsList, (methods, method) => {methods[method.id] = method; return methods}, {});
 
-export const getMethodsForCountry = countryCode => reduce((rc, method) => {
-	if (method.countries === undefined || includes(countryCode)(method.countries)) {
-		rc.push(omit('countries')(method));
+export const getMethodsForCountry = countryCode => _.reduce(methods, (rc, method) => {
+	if (_.isUndefined(method.countries) || _.includes(method.countries, countryCode)) {
+		rc.push(_.omit(method, 'countries'));
 	};
 	return rc;
-}, [])(methods);
+}, []);
 
 export const getMethodDisplayName = (i18nGet, methodId) => i18nGet(`method_${methodId}_title`);
