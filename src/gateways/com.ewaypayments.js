@@ -9,7 +9,8 @@ module.exports = {
 
 	// @see List of countries in https://eway.io/ (though some countries are not supported by the API version we use)
     countries : [
-        'AU', 'HK', 'MY', 'NZ', 'SG'
+//        'AU', 'HK', 'MY', 'NZ', 'SG'
+        'AU'
     ],
 	
 	fields: [],
