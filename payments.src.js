@@ -17404,7 +17404,9 @@ var PaymentsMethods =
 	    form: [{ type: 'string', name: 'customerId' }],
 
 	    // @see List of countries in https://eway.io/ (though some countries are not supported by the API version we use)
-	    countries: ['AU', 'HK', 'MY', 'NZ', 'SG'],
+	    countries: [
+	    //        'AU', 'HK', 'MY', 'NZ', 'SG'
+	    'AU'],
 
 	    fields: [],
 
