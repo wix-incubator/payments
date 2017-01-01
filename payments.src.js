@@ -120,7 +120,7 @@ var PaymentsMethods =
 	  var undefined;
 
 	  /** Used as the semantic version number. */
-	  var VERSION = '4.17.3';
+	  var VERSION = '4.17.4';
 
 	  /** Used as the size to enable large array optimizations. */
 	  var LARGE_ARRAY_SIZE = 200;
@@ -5740,8 +5740,8 @@ var PaymentsMethods =
 	     * @param {string} key The key of the property to inspect.
 	     * @returns {*} Returns the uncloned value or `undefined` to defer cloning to `_.cloneDeep`.
 	     */
-	    function customOmitClone(value, key) {
-	      return (key !== undefined && isPlainObject(value)) ? undefined : value;
+	    function customOmitClone(value) {
+	      return isPlainObject(value) ? undefined : value;
 	    }
 
 	    /**
