@@ -17261,7 +17261,7 @@ var PaymentsMethods =
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// Gateways
-	var gatewaysList = [__webpack_require__(8), __webpack_require__(10), __webpack_require__(11), __webpack_require__(12), __webpack_require__(13), __webpack_require__(14), __webpack_require__(15), __webpack_require__(16), __webpack_require__(17), __webpack_require__(18), __webpack_require__(19), __webpack_require__(20), __webpack_require__(21), __webpack_require__(22), __webpack_require__(23), __webpack_require__(24)];
+	var gatewaysList = [__webpack_require__(8), __webpack_require__(10), __webpack_require__(11), __webpack_require__(12), __webpack_require__(13), __webpack_require__(14), __webpack_require__(15), __webpack_require__(16), __webpack_require__(17), __webpack_require__(18), __webpack_require__(19), __webpack_require__(20), __webpack_require__(21), __webpack_require__(22), __webpack_require__(23), __webpack_require__(24), __webpack_require__(25)];
 
 	var gateways = exports.gateways = _lodash2.default.reduce(gatewaysList, function (gateways, gateway) {
 	  gateways[gateway.id] = gateway;return gateways;
@@ -17695,6 +17695,29 @@ var PaymentsMethods =
 
 /***/ },
 /* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _adapters = __webpack_require__(9);
+
+	module.exports = {
+	    id: 'il.co.leumi-card',
+
+	    form: [{ type: 'string', name: 'masof' }],
+
+	    countries: ['IL'],
+
+	    fields: ['holderName', 'holderId', 'csc'],
+
+	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
+	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
+	    keyToMerchant: JSON.parse,
+	    merchantToKey: JSON.stringify
+	};
+
+/***/ },
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
