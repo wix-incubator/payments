@@ -17,6 +17,7 @@ const gatewaysList = [
     require('./gateways/com.tranzila'),
     require('./gateways/com.worldpay'),
     require('./gateways/il.co.creditguard'),
+    require('./gateways/il.co.leumi-card'),
     require('./gateways/net.authorize'),
 ]
 
