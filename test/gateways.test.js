@@ -7,7 +7,7 @@ var adapters  = require("../src/adapters.js");
 describe("Getting gateway by country tests", function() {
     it ('returns the expected object when fetching Israel', function() {
 		var israeliGateways = gateways.getGatewaysForCountry("IL");
-		expect(israeliGateways).to.have.length.of(3);
+		expect(israeliGateways).to.have.length.of(4);
     });
 });
 
