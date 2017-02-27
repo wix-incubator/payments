@@ -17656,7 +17656,7 @@ var PaymentsMethods =
 	var _adapters = __webpack_require__(9);
 
 	module.exports = {
-	    id: 'com.worldpay',
+	    id: 'com.worldpay.enterprise',
 
 	    form: [{ type: 'string', name: 'merchantCode' }, { type: 'string', name: 'merchantPassword' }],
 
