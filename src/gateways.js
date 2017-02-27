@@ -15,7 +15,7 @@ const gatewaysList = [
     require('./gateways/com.pelecard'),
     require('./gateways/com.stripe'),
     require('./gateways/com.tranzila'),
-    require('./gateways/com.worldpay'),
+    require('./gateways/com.worldpay.enterprise'),
     require('./gateways/il.co.creditguard'),
     require('./gateways/il.co.leumi-card'),
     require('./gateways/net.authorize'),
