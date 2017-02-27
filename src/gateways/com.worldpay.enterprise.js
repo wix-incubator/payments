@@ -1,7 +1,7 @@
 import { simpleFormValuesToMerchant, simpleMerchantToFormValues } from '../adapters.js';
 
 module.exports = {
-    id : 'com.worldpay',
+    id : 'com.worldpay.enterprise',
 
     form : [
         {type : 'string', name : 'merchantCode'},
