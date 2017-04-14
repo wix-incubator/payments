@@ -43,7 +43,7 @@ var PaymentsMethods =
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -65,9 +65,9 @@ var PaymentsMethods =
 	exports.Methods = Methods;
 	exports.Gateways = Gateways;
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -102,9 +102,9 @@ var PaymentsMethods =
 		return i18nGet('method_' + methodId + '_title');
 	};
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, module) {/**
 	 * @license
@@ -17193,9 +17193,9 @@ var PaymentsMethods =
 
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(3)(module)))
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = function(module) {
 		if(!module.webpackPolyfill) {
@@ -17209,9 +17209,9 @@ var PaymentsMethods =
 	}
 
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	'use strict';
 
@@ -17220,9 +17220,9 @@ var PaymentsMethods =
 	});
 	var id = exports.id = 'cash';
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	'use strict';
 
@@ -17231,9 +17231,9 @@ var PaymentsMethods =
 	});
 	var id = exports.id = 'credit';
 
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	'use strict';
 
@@ -17243,9 +17243,9 @@ var PaymentsMethods =
 	var id = exports.id = 'com.cellarix';
 	var countries = exports.countries = ['IL'];
 
-/***/ },
+/***/ }),
 /* 7 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17287,9 +17287,9 @@ var PaymentsMethods =
 	  return i18nGet('gateway_' + gatewayId + '_field_' + field);
 	};
 
-/***/ },
+/***/ }),
 /* 8 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17310,9 +17310,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 9 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17362,9 +17362,9 @@ var PaymentsMethods =
 	};
 	/*******************************************/
 
-/***/ },
+/***/ }),
 /* 10 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17386,9 +17386,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 11 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17409,9 +17409,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 12 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17435,9 +17435,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 13 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17459,9 +17459,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 14 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17482,9 +17482,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 15 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17505,9 +17505,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 16 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17528,9 +17528,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 17 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17553,9 +17553,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 18 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17577,9 +17577,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 19 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17600,9 +17600,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 20 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17624,9 +17624,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 21 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17647,9 +17647,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 22 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17670,9 +17670,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 23 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17693,9 +17693,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 24 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17716,9 +17716,9 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ },
+/***/ }),
 /* 25 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17740,5 +17740,5 @@ var PaymentsMethods =
 	    merchantToKey: JSON.stringify
 	};
 
-/***/ }
+/***/ })
 /******/ ]);
