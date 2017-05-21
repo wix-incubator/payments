@@ -46,7 +46,7 @@
     "q": "^1.4.1"
   },
   "optionalDependencies": {
-    "uglifyjs": "^2.4.10",
+    "uglify-js": "^3.0.10",
     "webpack": "^1.13.0"
   },
   "publishConfig": {
