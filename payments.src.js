@@ -17250,7 +17250,7 @@ var PaymentsMethods =
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	exports.getGatewayFieldDisplayName = exports.getGatewayDisplayName = exports.getGatewayById = exports.getGatewaysForCountry = exports.gateways = undefined;
 
@@ -17258,101 +17258,100 @@ var PaymentsMethods =
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _auCom = __webpack_require__(8);
+	var _net = __webpack_require__(8);
 
-	var _auCom2 = _interopRequireDefault(_auCom);
+	var _net2 = _interopRequireDefault(_net);
 
 	var _com = __webpack_require__(13);
 
 	var _com2 = _interopRequireDefault(_com);
 
-	var _com3 = __webpack_require__(14);
-
-	var _com4 = _interopRequireDefault(_com3);
-
-	var _com5 = __webpack_require__(15);
-
-	var _com6 = _interopRequireDefault(_com5);
-
-	var _com7 = __webpack_require__(16);
-
-	var _com8 = _interopRequireDefault(_com7);
-
-	var _com9 = __webpack_require__(17);
-
-	var _com10 = _interopRequireDefault(_com9);
-
-	var _com11 = __webpack_require__(18);
-
-	var _com12 = _interopRequireDefault(_com11);
-
-	var _com13 = __webpack_require__(19);
-
-	var _com14 = _interopRequireDefault(_com13);
-
-	var _com15 = __webpack_require__(20);
-
-	var _com16 = _interopRequireDefault(_com15);
-
-	var _com17 = __webpack_require__(21);
-
-	var _com18 = _interopRequireDefault(_com17);
-
-	var _com19 = __webpack_require__(22);
-
-	var _com20 = _interopRequireDefault(_com19);
-
-	var _com21 = __webpack_require__(23);
-
-	var _com22 = _interopRequireDefault(_com21);
-
-	var _com23 = __webpack_require__(24);
-
-	var _com24 = _interopRequireDefault(_com23);
-
-	var _comWorldpay = __webpack_require__(25);
-
-	var _comWorldpay2 = _interopRequireDefault(_comWorldpay);
-
-	var _ilCo = __webpack_require__(26);
+	var _ilCo = __webpack_require__(14);
 
 	var _ilCo2 = _interopRequireDefault(_ilCo);
 
-	var _ilCo3 = __webpack_require__(27);
+	var _com3 = __webpack_require__(15);
+
+	var _com4 = _interopRequireDefault(_com3);
+
+	var _com5 = __webpack_require__(16);
+
+	var _com6 = _interopRequireDefault(_com5);
+
+	var _auCom = __webpack_require__(17);
+
+	var _auCom2 = _interopRequireDefault(_auCom);
+
+	var _ilCo3 = __webpack_require__(18);
 
 	var _ilCo4 = _interopRequireDefault(_ilCo3);
 
-	var _net = __webpack_require__(28);
+	var _com7 = __webpack_require__(19);
 
-	var _net2 = _interopRequireDefault(_net);
+	var _com8 = _interopRequireDefault(_com7);
+
+	var _com9 = __webpack_require__(20);
+
+	var _com10 = _interopRequireDefault(_com9);
+
+	var _com11 = __webpack_require__(21);
+
+	var _com12 = _interopRequireDefault(_com11);
+
+	var _com13 = __webpack_require__(22);
+
+	var _com14 = _interopRequireDefault(_com13);
+
+	var _com15 = __webpack_require__(23);
+
+	var _com16 = _interopRequireDefault(_com15);
+
+	var _com17 = __webpack_require__(24);
+
+	var _com18 = _interopRequireDefault(_com17);
+
+	var _com19 = __webpack_require__(25);
+
+	var _com20 = _interopRequireDefault(_com19);
+
+	var _com21 = __webpack_require__(26);
+
+	var _com22 = _interopRequireDefault(_com21);
+
+	var _com23 = __webpack_require__(27);
+
+	var _com24 = _interopRequireDefault(_com23);
+
+	var _comWorldpay = __webpack_require__(28);
+
+	var _comWorldpay2 = _interopRequireDefault(_comWorldpay);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// Gateways
-	var gatewaysList = [_auCom2.default, _com2.default, _com4.default, _com6.default, _com8.default, _com10.default, _com12.default, _com14.default, _com16.default, _com18.default, _com20.default, _com22.default, _com24.default, _comWorldpay2.default, _ilCo2.default, _ilCo4.default, _net2.default];
+	var gatewaysList = [_net2.default, _com2.default, _ilCo2.default, _com4.default, _com6.default, _auCom2.default, _ilCo4.default, _com8.default, _com10.default, _com12.default, _com14.default, _com16.default, _com18.default, _com20.default, _com22.default, _com24.default, _comWorldpay2.default];
 
 	var gateways = exports.gateways = _lodash2.default.reduce(gatewaysList, function (gateways, gateway) {
-	  gateways[gateway.id] = gateway;return gateways;
+	    gateways[gateway.id] = gateway;return gateways;
 	}, {});
 
 	var getGatewaysForCountry = exports.getGatewaysForCountry = function getGatewaysForCountry(countryCode) {
-	  return _lodash2.default.reduce(gateways, function (rc, gateway) {
-	    if (_lodash2.default.includes(gateway.countries, countryCode)) {
-	      rc.push(_lodash2.default.omit(gateway, 'countries'));
-	    };
-	    return rc;
-	  }, []);
+	    return (0, _lodash2.default)(gateways).filter(function (gateway) {
+	        return _lodash2.default.includes(gateway.countries, countryCode);
+	    }).orderBy('ranking', 'desc').map(function (gateway) {
+	        return _lodash2.default.omit(gateway, 'countries', 'ranking');
+	    }).value();
 	};
 
 	var getGatewayById = exports.getGatewayById = function getGatewayById(gatewayId) {
-	  return _lodash2.default.find(gateways, { 'id': gatewayId });
+	    return _lodash2.default.find(gateways, { 'id': gatewayId });
 	};
 
 	var getGatewayDisplayName = exports.getGatewayDisplayName = function getGatewayDisplayName(i18nGet, gatewayId) {
-	  return i18nGet('gateway_' + gatewayId + '_title');
+	    return i18nGet('gateway_' + gatewayId + '_title');
 	};
 	var getGatewayFieldDisplayName = exports.getGatewayFieldDisplayName = function getGatewayFieldDisplayName(i18nGet, gatewayId, field) {
-	  return i18nGet('gateway_' + gatewayId + '_field_' + field);
+	    return i18nGet('gateway_' + gatewayId + '_field_' + field);
 	};
 
 /***/ }),
@@ -17374,18 +17373,21 @@ var PaymentsMethods =
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-	    id: 'au.com.fatzebra',
+	    id: 'net.authorize',
 
-	    form: [{ type: 'string', name: 'username' }, { type: 'string', name: 'password' }],
+	    form: [{ type: 'string', name: 'login' }, { type: 'string', name: 'transactionKey' }],
 
-	    countries: ['AU'],
+	    // @see http://www.authorize.net/international/
+	    countries: ['AD', 'AT', 'AU', 'BE', 'BG', 'CA', 'CH', 'CY', 'CZ', 'DE', 'DK', 'ES', 'FI', 'FR', 'GB', 'GI', 'GR', 'HU', 'IE', 'IT', 'LI', 'LU', 'MC', 'MT', 'NL', 'NO', 'NZ', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK', 'SM', 'US', 'VA'],
 
-	    fields: ['holderName'],
+	    fields: [],
 
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 4
 	};
 
 /***/ }),
@@ -17494,11 +17496,48 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.braintreeFormValuesToMerchant,
 	    merchantToFormValues: _adapters.braintreeMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 4
 	};
 
 /***/ }),
 /* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	    id: 'il.co.creditguard',
+
+	    form: [{ type: 'string', name: 'user' }, { type: 'string', name: 'password' }, { type: 'string', name: 'terminalNumber' }, { type: 'string', name: 'supplierNumber' }, { type: 'string', name: 'idPrefix' }],
+
+	    countries: ['IL'],
+
+	    fields: [],
+
+	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
+	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
+	    keyToMerchant: JSON.parse,
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 2
+	};
+
+/***/ }),
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17527,11 +17566,13 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 2
 	};
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17563,11 +17604,83 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 3
 	};
 
 /***/ }),
-/* 16 */
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	    id: 'au.com.fatzebra',
+
+	    form: [{ type: 'string', name: 'username' }, { type: 'string', name: 'password' }],
+
+	    countries: ['AU'],
+
+	    fields: ['holderName'],
+
+	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
+	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
+	    keyToMerchant: JSON.parse,
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 4
+	};
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	    id: 'il.co.leumi-card',
+
+	    form: [{ type: 'string', name: 'masof' }],
+
+	    countries: ['IL'],
+
+	    fields: ['holderName', 'holderId', 'csc'],
+
+	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
+	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
+	    keyToMerchant: JSON.parse,
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 1
+	};
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17597,11 +17710,13 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 4
 	};
 
 /***/ }),
-/* 17 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17630,11 +17745,13 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 3
 	};
 
 /***/ }),
-/* 18 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17663,11 +17780,13 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 3
 	};
 
 /***/ }),
-/* 19 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17696,11 +17815,13 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 4
 	};
 
 /***/ }),
-/* 20 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17731,11 +17852,13 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 2
 	};
 
 /***/ }),
-/* 21 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17765,11 +17888,13 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 1
 	};
 
 /***/ }),
-/* 22 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17798,11 +17923,13 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 4
 	};
 
 /***/ }),
-/* 23 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17832,11 +17959,13 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 5
 	};
 
 /***/ }),
-/* 24 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17865,11 +17994,13 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    merchantToKey: _stringify2.default,
+
+	    ranking: 3
 	};
 
 /***/ }),
-/* 25 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17898,107 +18029,9 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
-	};
+	    merchantToKey: _stringify2.default,
 
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _stringify = __webpack_require__(9);
-
-	var _stringify2 = _interopRequireDefault(_stringify);
-
-	var _adapters = __webpack_require__(12);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	    id: 'il.co.creditguard',
-
-	    form: [{ type: 'string', name: 'user' }, { type: 'string', name: 'password' }, { type: 'string', name: 'terminalNumber' }, { type: 'string', name: 'supplierNumber' }, { type: 'string', name: 'idPrefix' }],
-
-	    countries: ['IL'],
-
-	    fields: [],
-
-	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
-	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
-	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
-	};
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _stringify = __webpack_require__(9);
-
-	var _stringify2 = _interopRequireDefault(_stringify);
-
-	var _adapters = __webpack_require__(12);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	    id: 'il.co.leumi-card',
-
-	    form: [{ type: 'string', name: 'masof' }],
-
-	    countries: ['IL'],
-
-	    fields: ['holderName', 'holderId', 'csc'],
-
-	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
-	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
-	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
-	};
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _stringify = __webpack_require__(9);
-
-	var _stringify2 = _interopRequireDefault(_stringify);
-
-	var _adapters = __webpack_require__(12);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	    id: 'net.authorize',
-
-	    form: [{ type: 'string', name: 'login' }, { type: 'string', name: 'transactionKey' }],
-
-	    // @see http://www.authorize.net/international/
-	    countries: ['AD', 'AT', 'AU', 'BE', 'BG', 'CA', 'CH', 'CY', 'CZ', 'DE', 'DK', 'ES', 'FI', 'FR', 'GB', 'GI', 'GR', 'HU', 'IE', 'IT', 'LI', 'LU', 'MC', 'MT', 'NL', 'NO', 'NZ', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK', 'SM', 'US', 'VA'],
-
-	    fields: [],
-
-	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
-	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
-	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default
+	    ranking: 2
 	};
 
 /***/ })
