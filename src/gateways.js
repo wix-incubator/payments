@@ -1,9 +1,12 @@
 import _ from 'lodash';
 
-import fatzebra from './gateways/au.com.fatzebra';
+import authorizeNet from './gateways/net.authorize';
 import braintree from './gateways/com.braintreegateway';
+import creditguard from './gateways/il.co.creditguard';
 import dengionline from './gateways/com.dengionline';
 import eway from './gateways/com.ewaypayments';
+import fatzebra from './gateways/au.com.fatzebra';
+import leumiCard from './gateways/il.co.leumi-card';
 import mercadopago from './gateways/com.mercadopago';
 import mercurypay from './gateways/com.mercurypay';
 import paguelofacil from './gateways/com.paguelofacil';
@@ -14,17 +17,17 @@ import pelecard from './gateways/com.pelecard';
 import stripe from './gateways/com.stripe';
 import tranzila from './gateways/com.tranzila';
 import worldpayEnterprise from './gateways/com.worldpay.enterprise';
-import creditguard from './gateways/il.co.creditguard';
-import leumiCard from './gateways/il.co.leumi-card';
-import authorizeNet from './gateways/net.authorize';
 
 
 // Gateways
 const gatewaysList = [
-    fatzebra,
+    authorizeNet,
     braintree,
+    creditguard,
     dengionline,
     eway,
+    fatzebra,
+    leumiCard,
     mercadopago,
     mercurypay,
     paguelofacil,
@@ -34,21 +37,19 @@ const gatewaysList = [
     pelecard,
     stripe,
     tranzila,
-    worldpayEnterprise,
-    creditguard,
-    leumiCard,
-    authorizeNet
-]
+    worldpayEnterprise
+];
 
 
 export const gateways = _.reduce(gatewaysList, (gateways, gateway) => {gateways[gateway.id] = gateway; return gateways}, {});
 
-export const getGatewaysForCountry = countryCode => _.reduce(gateways, (rc, gateway) => {
-	if (_.includes(gateway.countries, countryCode)) {
-		rc.push(_.omit(gateway, 'countries'));
-	};
-	return rc;
-}, []);
+export const getGatewaysForCountry = countryCode => {
+    return _(gateways)
+        .filter(gateway => _.includes(gateway.countries, countryCode))
+        .orderBy('ranking', 'desc')
+        .map(gateway => _.omit(gateway, 'countries', 'ranking'))
+        .value();
+};
 
 export const getGatewayById = gatewayId => _.find(gateways, {'id': gatewayId});
 

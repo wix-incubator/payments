@@ -25,5 +25,7 @@ export default {
     formValuesToMerchant : braintreeFormValuesToMerchant,
     merchantToFormValues : braintreeMerchantToFormValues,
     keyToMerchant        : JSON.parse,
-    merchantToKey        : JSON.stringify
+    merchantToKey        : JSON.stringify,
+    
+    ranking: 4
 };

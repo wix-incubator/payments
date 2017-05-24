@@ -20,5 +20,7 @@ export default {
     formValuesToMerchant : simpleFormValuesToMerchant,
     merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
-    merchantToKey        : JSON.stringify
+    merchantToKey        : JSON.stringify,
+    
+    ranking: 2
 };
