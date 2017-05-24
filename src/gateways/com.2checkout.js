@@ -1,6 +1,6 @@
-import { simpleFormValuesToMerchant, simpleMerchantToFormValues } from '../adapters.js';
+import { simpleFormValuesToMerchant, simpleMerchantToFormValues } from '../adapters';
 
-module.exports = {
+export default {
     id : 'com.2checkout',
 
     form : [

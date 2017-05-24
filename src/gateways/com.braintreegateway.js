@@ -1,6 +1,6 @@
 import { braintreeFormValuesToMerchant, braintreeMerchantToFormValues } from '../adapters';
 
-module.exports = {
+export default {
     id : 'com.braintreegateway',
 
     form : [
@@ -25,5 +25,5 @@ module.exports = {
     formValuesToMerchant : braintreeFormValuesToMerchant,
     merchantToFormValues : braintreeMerchantToFormValues,
     keyToMerchant        : JSON.parse,
-    merchantToKey        : JSON.stringify,
+    merchantToKey        : JSON.stringify
 };

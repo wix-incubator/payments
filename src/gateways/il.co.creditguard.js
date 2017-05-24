@@ -1,6 +1,6 @@
-import { simpleFormValuesToMerchant, simpleMerchantToFormValues } from '../adapters.js';
+import { simpleFormValuesToMerchant, simpleMerchantToFormValues } from '../adapters';
 
-module.exports = {
+export default {
     id : 'il.co.creditguard',
 
     form : [
@@ -20,5 +20,5 @@ module.exports = {
     formValuesToMerchant : simpleFormValuesToMerchant,
     merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
-    merchantToKey        : JSON.stringify,
+    merchantToKey        : JSON.stringify
 };

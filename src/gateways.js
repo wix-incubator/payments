@@ -1,24 +1,43 @@
 import _ from 'lodash';
 
+import fatzebra from './gateways/au.com.fatzebra';
+import braintree from './gateways/com.braintreegateway';
+import dengionline from './gateways/com.dengionline';
+import eway from './gateways/com.ewaypayments';
+import mercadopago from './gateways/com.mercadopago';
+import mercurypay from './gateways/com.mercurypay';
+import paguelofacil from './gateways/com.paguelofacil';
+import paybox from './gateways/com.paybox';
+import paymentexpress from './gateways/com.paymentexpress';
+import paypal from './gateways/com.paypal';
+import pelecard from './gateways/com.pelecard';
+import stripe from './gateways/com.stripe';
+import tranzila from './gateways/com.tranzila';
+import worldpayEnterprise from './gateways/com.worldpay.enterprise';
+import creditguard from './gateways/il.co.creditguard';
+import leumiCard from './gateways/il.co.leumi-card';
+import authorizeNet from './gateways/net.authorize';
+
+
 // Gateways
 const gatewaysList = [
-    require('./gateways/au.com.fatzebra'),
-    require('./gateways/com.braintreegateway'),
-    require('./gateways/com.dengionline'),
-    require('./gateways/com.ewaypayments'),
-    require('./gateways/com.mercadopago'),
-    require('./gateways/com.mercurypay'),
-    require('./gateways/com.paguelofacil'),
-    require('./gateways/com.paybox'),
-    require('./gateways/com.paymentexpress'),
-    require('./gateways/com.paypal'),
-    require('./gateways/com.pelecard'),
-    require('./gateways/com.stripe'),
-    require('./gateways/com.tranzila'),
-    require('./gateways/com.worldpay.enterprise'),
-    require('./gateways/il.co.creditguard'),
-    require('./gateways/il.co.leumi-card'),
-    require('./gateways/net.authorize'),
+    fatzebra,
+    braintree,
+    dengionline,
+    eway,
+    mercadopago,
+    mercurypay,
+    paguelofacil,
+    paybox,
+    paymentexpress,
+    paypal,
+    pelecard,
+    stripe,
+    tranzila,
+    worldpayEnterprise,
+    creditguard,
+    leumiCard,
+    authorizeNet
 ]
 
 
