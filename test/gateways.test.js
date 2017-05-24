@@ -1,31 +1,35 @@
 var expect    = require('chai').expect;
 var _         = require("lodash");
-var gateways  = require("../src/gateways.js");
-var adapters  = require("../src/adapters.js");
+var gateways  = require("../src/gateways");
+var adapters  = require("../src/adapters");
 
 
-describe("Getting gateway by country tests", function() {
-    it ('returns the expected object when fetching Israel', function() {
-		var israeliGateways = gateways.getGatewaysForCountry("IL");
-		expect(israeliGateways).to.have.length.of(4);
-    });
-});
-
-describe("Getting gateway by id tests", function() {
-	it ('returns the expected object when fetching eway', function() {
-		var gateway = gateways.getGatewayById("com.ewaypayments");
-		expect(gateway.id).to.equal("com.ewaypayments");
-	});
-});
-
-describe("Locale tests", function() {
+describe("gateways", () => {
     const i18nGet = (token) => token;
-    it ('returns "gateway_com.braintreegateway_title" for "com.braintreegateway" (gateway name)', function() {
-    	expect(gateways.getGatewayDisplayName(i18nGet, "com.braintreegateway")).to.equal("gateway_com.braintreegateway_title");
+    
+    describe("getGatewaysForCountry", () => {
+        it ('returns the expected object when fetching Israel', () => {
+            var israeliGateways = gateways.getGatewaysForCountry("IL");
+            expect(israeliGateways).to.have.length.of(4);
+        });
     });
 
-    it ('returns "gateway_com.braintreegateway_field_merchantId" for Braintree "merchantId" (gateway field)', function() {
-    	expect(gateways.getGatewayFieldDisplayName(i18nGet, "com.braintreegateway", "merchantId")).to.equal("gateway_com.braintreegateway_field_merchantId");
+    describe("getGatewayById", () => {
+        it ('returns the expected object when fetching eway', () => {
+            var gateway = gateways.getGatewayById("com.ewaypayments");
+            expect(gateway.id).to.equal("com.ewaypayments");
+        });
     });
 
+    describe("getGatewayDisplayName", () => {
+        it ('returns "gateway_com.braintreegateway_title" for "com.braintreegateway" (gateway name)', () => {
+            expect(gateways.getGatewayDisplayName(i18nGet, "com.braintreegateway")).to.equal("gateway_com.braintreegateway_title");
+        });
+    });
+
+    describe("getGatewayFieldDisplayName", () => {
+        it ('returns "gateway_com.braintreegateway_field_merchantId" for Braintree "merchantId" (gateway field)', () => {
+            expect(gateways.getGatewayFieldDisplayName(i18nGet, "com.braintreegateway", "merchantId")).to.equal("gateway_com.braintreegateway_field_merchantId");
+        });
+    });
 });
