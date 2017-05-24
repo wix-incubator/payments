@@ -17258,10 +17258,78 @@ var PaymentsMethods =
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
+	var _auCom = __webpack_require__(8);
+
+	var _auCom2 = _interopRequireDefault(_auCom);
+
+	var _com = __webpack_require__(13);
+
+	var _com2 = _interopRequireDefault(_com);
+
+	var _com3 = __webpack_require__(14);
+
+	var _com4 = _interopRequireDefault(_com3);
+
+	var _com5 = __webpack_require__(15);
+
+	var _com6 = _interopRequireDefault(_com5);
+
+	var _com7 = __webpack_require__(16);
+
+	var _com8 = _interopRequireDefault(_com7);
+
+	var _com9 = __webpack_require__(17);
+
+	var _com10 = _interopRequireDefault(_com9);
+
+	var _com11 = __webpack_require__(18);
+
+	var _com12 = _interopRequireDefault(_com11);
+
+	var _com13 = __webpack_require__(19);
+
+	var _com14 = _interopRequireDefault(_com13);
+
+	var _com15 = __webpack_require__(20);
+
+	var _com16 = _interopRequireDefault(_com15);
+
+	var _com17 = __webpack_require__(21);
+
+	var _com18 = _interopRequireDefault(_com17);
+
+	var _com19 = __webpack_require__(22);
+
+	var _com20 = _interopRequireDefault(_com19);
+
+	var _com21 = __webpack_require__(23);
+
+	var _com22 = _interopRequireDefault(_com21);
+
+	var _com23 = __webpack_require__(24);
+
+	var _com24 = _interopRequireDefault(_com23);
+
+	var _comWorldpay = __webpack_require__(25);
+
+	var _comWorldpay2 = _interopRequireDefault(_comWorldpay);
+
+	var _ilCo = __webpack_require__(26);
+
+	var _ilCo2 = _interopRequireDefault(_ilCo);
+
+	var _ilCo3 = __webpack_require__(27);
+
+	var _ilCo4 = _interopRequireDefault(_ilCo3);
+
+	var _net = __webpack_require__(28);
+
+	var _net2 = _interopRequireDefault(_net);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// Gateways
-	var gatewaysList = [__webpack_require__(8), __webpack_require__(10), __webpack_require__(11), __webpack_require__(12), __webpack_require__(13), __webpack_require__(14), __webpack_require__(15), __webpack_require__(16), __webpack_require__(17), __webpack_require__(18), __webpack_require__(19), __webpack_require__(20), __webpack_require__(21), __webpack_require__(22), __webpack_require__(23), __webpack_require__(24), __webpack_require__(25)];
+	var gatewaysList = [_auCom2.default, _com2.default, _com4.default, _com6.default, _com8.default, _com10.default, _com12.default, _com14.default, _com16.default, _com18.default, _com20.default, _com22.default, _com24.default, _comWorldpay2.default, _ilCo2.default, _ilCo4.default, _net2.default];
 
 	var gateways = exports.gateways = _lodash2.default.reduce(gatewaysList, function (gateways, gateway) {
 	  gateways[gateway.id] = gateway;return gateways;
@@ -17293,9 +17361,19 @@ var PaymentsMethods =
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'au.com.fatzebra',
 
 	    form: [{ type: 'string', name: 'username' }, { type: 'string', name: 'password' }],
@@ -17307,11 +17385,34 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
 /* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(10), __esModule: true };
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var core  = __webpack_require__(11)
+	  , $JSON = core.JSON || (core.JSON = {stringify: JSON.stringify});
+	module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
+	  return $JSON.stringify.apply($JSON, arguments);
+	};
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+	var core = module.exports = {version: '2.4.0'};
+	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17363,14 +17464,24 @@ var PaymentsMethods =
 	/*******************************************/
 
 /***/ }),
-/* 10 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'com.braintreegateway',
 
 	    form: [{ type: 'string', name: 'merchantId' }, { type: 'string', name: 'publicKey' }, { type: 'string', name: 'privateKey' }, { type: 'currency', name: 'currency' }, { type: 'string', name: 'merchantAccountId' }],
@@ -17383,18 +17494,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.braintreeFormValuesToMerchant,
 	    merchantToFormValues: _adapters.braintreeMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 11 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'com.dengionline',
 
 	    form: [{ type: 'string', name: 'siteId' }, { type: 'string', name: 'salt' }],
@@ -17406,18 +17527,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 12 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'com.ewaypayments',
 
 	    form: [{ type: 'string', name: 'customerId' }],
@@ -17432,18 +17563,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 13 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'com.mercadopago',
 
 	    form: [{ type: 'string', name: 'clientId' }, { type: 'string', name: 'clientSecret' }, { type: 'country', name: 'countryCode' }],
@@ -17456,18 +17597,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 14 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'com.mercurypay',
 
 	    form: [{ type: 'string', name: 'merchantId' }, { type: 'string', name: 'password' }],
@@ -17479,18 +17630,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 15 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'com.paguelofacil',
 
 	    form: [{ type: 'string', name: 'cclw' }],
@@ -17502,18 +17663,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 16 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'com.paybox',
 
 	    form: [{ type: 'string', name: 'site' }, { type: 'string', name: 'rang' }, { type: 'string', name: 'cle' }],
@@ -17525,18 +17696,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 17 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'com.paymentexpress',
 
 	    form: [{ type: 'string', name: 'username' }, { type: 'string', name: 'password' }],
@@ -17550,18 +17731,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 18 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'com.paypal',
 
 	    form: [{ type: 'string', name: 'clientId' }, { type: 'string', name: 'secret' }],
@@ -17574,18 +17765,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 19 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'com.pelecard',
 
 	    form: [{ type: 'string', name: 'terminalNumber' }, { type: 'string', name: 'user' }, { type: 'string', name: 'password' }, { type: 'string', name: 'shopNumber' }],
@@ -17597,18 +17798,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 20 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'com.stripe',
 
 	    form: [{ type: 'string', name: 'apiKey' }],
@@ -17621,18 +17832,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 21 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'com.tranzila',
 
 	    form: [{ type: 'string', name: 'username' }],
@@ -17644,18 +17865,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 22 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'com.worldpay.enterprise',
 
 	    form: [{ type: 'string', name: 'merchantCode' }, { type: 'string', name: 'merchantPassword' }],
@@ -17667,18 +17898,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 23 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'il.co.creditguard',
 
 	    form: [{ type: 'string', name: 'user' }, { type: 'string', name: 'password' }, { type: 'string', name: 'terminalNumber' }, { type: 'string', name: 'supplierNumber' }, { type: 'string', name: 'idPrefix' }],
@@ -17690,18 +17931,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 24 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'il.co.leumi-card',
 
 	    form: [{ type: 'string', name: 'masof' }],
@@ -17713,18 +17964,28 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ }),
-/* 25 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _adapters = __webpack_require__(9);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	module.exports = {
+	var _stringify = __webpack_require__(9);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _adapters = __webpack_require__(12);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	    id: 'net.authorize',
 
 	    form: [{ type: 'string', name: 'login' }, { type: 'string', name: 'transactionKey' }],
@@ -17737,7 +17998,7 @@ var PaymentsMethods =
 	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
 	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
 	    keyToMerchant: JSON.parse,
-	    merchantToKey: JSON.stringify
+	    merchantToKey: _stringify2.default
 	};
 
 /***/ })
