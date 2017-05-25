@@ -10,13 +10,13 @@ export default {
     countries : [
         'PA'
     ],
-	
-	fields: ['holderName', 'csc'],
+
+    fields: ['holderName', 'csc'],
 
     formValuesToMerchant : simpleFormValuesToMerchant,
     merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
-    
+
     ranking: 3
 };

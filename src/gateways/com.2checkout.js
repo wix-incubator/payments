@@ -34,13 +34,13 @@ export default {
         "UZ", "VU", "VA", "VE", "VN", "VG", "VI", "WF", "EH", "YE",
         "ZM", "ZW"
     ],
-	
+
     fields: [],
 
     formValuesToMerchant : simpleFormValuesToMerchant,
     merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
-    
+
     ranking: 4
 };

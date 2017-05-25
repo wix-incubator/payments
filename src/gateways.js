@@ -41,7 +41,7 @@ const gatewaysList = [
 ];
 
 
-export const gateways = _.reduce(gatewaysList, (gateways, gateway) => {gateways[gateway.id] = gateway; return gateways}, {});
+export const gateways = _.reduce(gatewaysList, (gateways, gateway) => {gateways[gateway.id] = gateway; return gateways;}, {});
 
 export const getGatewaysForCountry = countryCode => {
     return _(gateways)

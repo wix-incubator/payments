@@ -13,13 +13,13 @@ export default {
         'FR', 'GB', 'HK', 'IE', 'IT', 'JP', 'LU', 'MX', 'NL', 'NO',
         'NZ', 'PT', 'SE', 'SG', 'US'
     ],
-	
+
     fields: [],
 
     formValuesToMerchant : simpleFormValuesToMerchant,
     merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
-    
+
     ranking: 5
 };

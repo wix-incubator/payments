@@ -12,13 +12,13 @@ export default {
     countries : [
         'CA', 'GB', 'US'
     ],
-	
-	fields: [],
+
+    fields: [],
 
     formValuesToMerchant : simpleFormValuesToMerchant,
     merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
-    
+
     ranking: 1
 };

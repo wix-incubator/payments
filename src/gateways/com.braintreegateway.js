@@ -13,19 +13,19 @@ export default {
 
 	// @see https://www.braintreepayments.com/country-selection
     countries : [
-		'AD', 'AT', 'AU', 'BE', 'BG', 'CA', 'CH', 'CY', 'CZ', 'DE',
-		'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GG', 'GI', 'GR', 'HK',
-		'HR', 'HU', 'IE', 'IM', 'IS', 'IT', 'JE', 'LI', 'LT', 'LU',
-		'LV', 'MC', 'MT', 'MY', 'NL', 'NO', 'NZ', 'PL', 'PT', 'RO',
-		'SE', 'SG', 'SI', 'SK', 'SM', 'TR', 'US'
+        'AD', 'AT', 'AU', 'BE', 'BG', 'CA', 'CH', 'CY', 'CZ', 'DE',
+        'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GG', 'GI', 'GR', 'HK',
+        'HR', 'HU', 'IE', 'IM', 'IS', 'IT', 'JE', 'LI', 'LT', 'LU',
+        'LV', 'MC', 'MT', 'MY', 'NL', 'NO', 'NZ', 'PL', 'PT', 'RO',
+        'SE', 'SG', 'SI', 'SK', 'SM', 'TR', 'US'
     ],
 
-	fields: [],
+    fields: [],
 
     formValuesToMerchant : braintreeFormValuesToMerchant,
     merchantToFormValues : braintreeMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
-    
+
     ranking: 4
 };

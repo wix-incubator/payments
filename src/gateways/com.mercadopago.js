@@ -13,13 +13,13 @@ export default {
     countries : [
         'AR', 'BR', 'CL', 'CO', 'MX', 'VE'
     ],
-	
-	fields: ['holderName', 'holderId', 'csc'],
+
+    fields: ['holderName', 'holderId', 'csc'],
 
     formValuesToMerchant : simpleFormValuesToMerchant,
     merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
-    
+
     ranking: 4
 };

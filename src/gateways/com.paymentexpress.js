@@ -14,13 +14,13 @@ export default {
         'AU', 'BD', 'BN', 'CA', 'GB', 'HK', 'IE', 'IN', 'MO', 'MY',
         'NZ', 'SG', 'US', 'ZA'
     ],
-	
-	fields: [],
+
+    fields: [],
 
     formValuesToMerchant : simpleFormValuesToMerchant,
     merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
-    
+
     ranking: 2
 };

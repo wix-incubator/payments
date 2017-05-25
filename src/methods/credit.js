@@ -1,1 +1,3 @@
-export const id = 'credit';
+export default {
+    id: 'credit'
+};

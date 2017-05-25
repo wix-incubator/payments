@@ -11,13 +11,13 @@ export default {
     countries : [
         'AU',
     ],
-	
-	fields: ['holderName'],
+
+    fields: ['holderName'],
 
     formValuesToMerchant : simpleFormValuesToMerchant,
     merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
-    
+
     ranking: 4
 };

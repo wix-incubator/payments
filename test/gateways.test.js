@@ -5,7 +5,7 @@ import * as gateways from '../src/gateways';
 
 describe('gateways', () => {
     const i18nGet = (token) => token;
-    
+
     describe('getGatewaysForCountry', () => {
         it ('returns just the gateways that support the given country', () => {
             const israeliGateways = gateways.getGatewaysForCountry('IL');

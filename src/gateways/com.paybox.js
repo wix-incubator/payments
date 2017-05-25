@@ -12,13 +12,13 @@ export default {
     countries : [
         'BE', 'FR', 'NL'
     ],
-	
-	fields: ['csc'],
+
+    fields: ['csc'],
 
     formValuesToMerchant : simpleFormValuesToMerchant,
     merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
-    
+
     ranking: 4
 };

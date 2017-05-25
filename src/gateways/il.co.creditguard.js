@@ -14,13 +14,13 @@ export default {
     countries : [
         'IL',
     ],
-	
-	fields: [],
+
+    fields: [],
 
     formValuesToMerchant : simpleFormValuesToMerchant,
     merchantToFormValues : simpleMerchantToFormValues,
     keyToMerchant        : JSON.parse,
     merchantToKey        : JSON.stringify,
-    
+
     ranking: 2
 };

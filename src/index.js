@@ -3,5 +3,5 @@ import * as Gateways from './gateways';
 
 export {
 	Methods,
-	Gateways,
+	Gateways
 };

@@ -1,4 +1,6 @@
-export const id = 'com.cellarix';
-export const countries = [
-    'IL',
-];
+export default {
+    id: 'com.cellarix',
+    countries: [
+        'IL'
+    ]
+};
