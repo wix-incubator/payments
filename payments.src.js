@@ -72,7 +72,7 @@ var PaymentsMethods =
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	    value: true
 	});
 	exports.getMethodDisplayName = exports.getMethodsForCountry = undefined;
 
@@ -80,26 +80,36 @@ var PaymentsMethods =
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
+	var _cash = __webpack_require__(4);
+
+	var _cash2 = _interopRequireDefault(_cash);
+
+	var _credit = __webpack_require__(5);
+
+	var _credit2 = _interopRequireDefault(_credit);
+
+	var _com = __webpack_require__(6);
+
+	var _com2 = _interopRequireDefault(_com);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// Methods
-	var methodsList = [__webpack_require__(4), __webpack_require__(5), __webpack_require__(6)];
-
+	var methodsList = [_cash2.default, _credit2.default, _com2.default];
 	var methods = _lodash2.default.reduce(methodsList, function (methods, method) {
-		methods[method.id] = method;return methods;
+	    methods[method.id] = method;return methods;
 	}, {});
 
 	var getMethodsForCountry = exports.getMethodsForCountry = function getMethodsForCountry(countryCode) {
-		return _lodash2.default.reduce(methods, function (rc, method) {
-			if (_lodash2.default.isUndefined(method.countries) || _lodash2.default.includes(method.countries, countryCode)) {
-				rc.push(_lodash2.default.omit(method, 'countries'));
-			};
-			return rc;
-		}, []);
+	    return (0, _lodash2.default)(methods).filter(function (method) {
+	        return _lodash2.default.isUndefined(method.countries) || _lodash2.default.includes(method.countries, countryCode);
+	    }).map(function (method) {
+	        return _lodash2.default.omit(method, 'countries');
+	    }).value();
 	};
 
 	var getMethodDisplayName = exports.getMethodDisplayName = function getMethodDisplayName(i18nGet, methodId) {
-		return i18nGet('method_' + methodId + '_title');
+	    return i18nGet('method_' + methodId + '_title');
 	};
 
 /***/ }),
@@ -17216,9 +17226,11 @@ var PaymentsMethods =
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
-	var id = exports.id = 'cash';
+	exports.default = {
+	    id: 'cash'
+	};
 
 /***/ }),
 /* 5 */
@@ -17227,9 +17239,11 @@ var PaymentsMethods =
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
-	var id = exports.id = 'credit';
+	exports.default = {
+	    id: 'credit'
+	};
 
 /***/ }),
 /* 6 */
@@ -17240,8 +17254,10 @@ var PaymentsMethods =
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	var id = exports.id = 'com.cellarix';
-	var countries = exports.countries = ['IL'];
+	exports.default = {
+	    id: 'com.cellarix',
+	    countries: ['IL']
+	};
 
 /***/ }),
 /* 7 */
