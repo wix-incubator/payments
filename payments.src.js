@@ -17290,17 +17290,17 @@ var PaymentsMethods =
 
 	var _com4 = _interopRequireDefault(_com3);
 
-	var _com5 = __webpack_require__(16);
-
-	var _com6 = _interopRequireDefault(_com5);
-
-	var _auCom = __webpack_require__(17);
+	var _auCom = __webpack_require__(16);
 
 	var _auCom2 = _interopRequireDefault(_auCom);
 
-	var _ilCo3 = __webpack_require__(18);
+	var _ilCo3 = __webpack_require__(17);
 
 	var _ilCo4 = _interopRequireDefault(_ilCo3);
+
+	var _com5 = __webpack_require__(18);
+
+	var _com6 = _interopRequireDefault(_com5);
 
 	var _com7 = __webpack_require__(19);
 
@@ -17334,18 +17334,14 @@ var PaymentsMethods =
 
 	var _com22 = _interopRequireDefault(_com21);
 
-	var _com23 = __webpack_require__(27);
-
-	var _com24 = _interopRequireDefault(_com23);
-
-	var _comWorldpay = __webpack_require__(28);
+	var _comWorldpay = __webpack_require__(27);
 
 	var _comWorldpay2 = _interopRequireDefault(_comWorldpay);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// Gateways
-	var gatewaysList = [_net2.default, _com2.default, _ilCo2.default, _com4.default, _com6.default, _auCom2.default, _ilCo4.default, _com8.default, _com10.default, _com12.default, _com14.default, _com16.default, _com18.default, _com20.default, _com22.default, _com24.default, _comWorldpay2.default];
+	var gatewaysList = [_net2.default, _com2.default, _ilCo2.default, _com4.default, _auCom2.default, _ilCo4.default, _com6.default, _com8.default, _com10.default, _com12.default, _com14.default, _com16.default, _com18.default, _com20.default, _com22.default, _comWorldpay2.default];
 
 	var gateways = exports.gateways = _lodash2.default.reduce(gatewaysList, function (gateways, gateway) {
 	    gateways[gateway.id] = gateway;return gateways;
@@ -17571,41 +17567,6 @@ var PaymentsMethods =
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-	    id: 'com.dengionline',
-
-	    form: [{ type: 'string', name: 'siteId' }, { type: 'string', name: 'salt' }],
-
-	    countries: ['RU'],
-
-	    fields: ['holderName', 'csc'],
-
-	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
-	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
-	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default,
-
-	    ranking: 2
-	};
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _stringify = __webpack_require__(9);
-
-	var _stringify2 = _interopRequireDefault(_stringify);
-
-	var _adapters = __webpack_require__(12);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
 	    id: 'com.ewaypayments',
 
 	    form: [{ type: 'string', name: 'customerId' }],
@@ -17626,7 +17587,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17661,7 +17622,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17696,7 +17657,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17732,7 +17693,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17767,7 +17728,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17802,7 +17763,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17837,7 +17798,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17874,7 +17835,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17910,7 +17871,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17945,7 +17906,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17981,7 +17942,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18016,7 +17977,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
