@@ -3,7 +3,6 @@ import _ from 'lodash';
 import authorizeNet from './gateways/net.authorize';
 import braintree from './gateways/com.braintreegateway';
 import creditguard from './gateways/il.co.creditguard';
-import dengionline from './gateways/com.dengionline';
 import eway from './gateways/com.ewaypayments';
 import fatzebra from './gateways/au.com.fatzebra';
 import leumiCard from './gateways/il.co.leumi-card';
@@ -24,7 +23,6 @@ const gatewaysList = [
     authorizeNet,
     braintree,
     creditguard,
-    dengionline,
     eway,
     fatzebra,
     leumiCard,
