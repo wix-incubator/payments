@@ -17822,7 +17822,7 @@ var PaymentsMethods =
 
 	    // @see https://www.paymentexpress.com/Knowledge_Base/Connectivity.aspx
 	    // @see https://www.paymentexpress.com/Knowledge_Base/Bank_Guides
-	    countries: ['AU', 'BD', 'BN', 'CA', 'GB', 'HK', 'IE', 'IN', 'MO', 'MY', 'NZ', 'SG', 'US', 'ZA'],
+	    countries: ['AU', 'BD', 'BN', 'CA', 'GB', 'HK', 'IE', 'MO', 'MY', 'NZ', 'SG', 'US', 'ZA'],
 
 	    fields: [],
 
