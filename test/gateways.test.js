@@ -9,13 +9,13 @@ describe('gateways', () => {
     describe('getGatewaysForCountry', () => {
         it ('returns just the gateways that support the given country', () => {
             const israeliGateways = gateways.getGatewaysForCountry('IL');
-            expect(israeliGateways).to.have.length.of(4);
+            expect(israeliGateways).to.have.length.of(3);
         });
 
         it ('returns gateways sorted by ranking, in descending order', () => {
             const israeliGateways = gateways.getGatewaysForCountry('IL');
             expect(_.head(israeliGateways).id).to.equal('com.pelecard');
-            expect(_.last(israeliGateways).id).to.equal('il.co.leumi-card');
+            expect(_.last(israeliGateways).id).to.equal('il.co.creditguard');
         });
 
         it ('omits countries and ranking fields', () => {

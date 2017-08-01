@@ -5,7 +5,6 @@ import braintree from './gateways/com.braintreegateway';
 import creditguard from './gateways/il.co.creditguard';
 import eway from './gateways/com.ewaypayments';
 import fatzebra from './gateways/au.com.fatzebra';
-import leumiCard from './gateways/il.co.leumi-card';
 import mercadopago from './gateways/com.mercadopago';
 import mercurypay from './gateways/com.mercurypay';
 import paguelofacil from './gateways/com.paguelofacil';
@@ -25,7 +24,6 @@ const gatewaysList = [
     creditguard,
     eway,
     fatzebra,
-    leumiCard,
     mercadopago,
     mercurypay,
     paguelofacil,
