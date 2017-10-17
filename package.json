@@ -11,7 +11,7 @@
     "compile-library": "webpack --output-library PaymentsMethods --output-library-target var dist bin/payments.src.js",
     "prepublish": "npm test && npm run compile && npm run compile-library",
     "build": "babel bin/payments.src.js | uglifyjs > bin/payments.js",
-    "release": "npm install @wix/wnpm-ci && wnpm-release -- --no-shrinkwrap && npm install bower-auto-release && bower-auto-release --dist bin"
+    "release": "npm install wnpm-ci --no-save && wnpm-release -- --no-shrinkwrap && npm install bower-auto-release && bower-auto-release --dist bin"
   },
   "repository": {
     "type": "git",
