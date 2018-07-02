@@ -5,7 +5,7 @@ import * as methods from '../src/methods';
 describe('Getting method by country tests', () => {
     it ('returns the expected object when fetching Israel', () => {
         const israeliMethods = methods.getMethodsForCountry('IL');
-        expect(israeliMethods).to.have.length.of(3);
+        expect(israeliMethods).to.have.length.of(4);
     });
 });
 

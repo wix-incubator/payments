@@ -3,12 +3,14 @@ import _ from 'lodash';
 import cash from './methods/cash';
 import credit from './methods/credit';
 import cellarix from './methods/com.cellarix';
+import mysodexo from './methods/il.co.mysodexo';
 
 // Methods
 const methodsList = [
     cash,
     credit,
-    cellarix
+    cellarix,
+    mysodexo
 ];
 const methods = _.reduce(methodsList, (methods, method) => {methods[method.id] = method; return methods;}, {});
 
