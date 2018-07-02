@@ -56,7 +56,7 @@ var PaymentsMethods =
 
 	var Methods = _interopRequireWildcard(_methods);
 
-	var _gateways = __webpack_require__(7);
+	var _gateways = __webpack_require__(8);
 
 	var Gateways = _interopRequireWildcard(_gateways);
 
@@ -92,10 +92,14 @@ var PaymentsMethods =
 
 	var _com2 = _interopRequireDefault(_com);
 
+	var _ilCo = __webpack_require__(7);
+
+	var _ilCo2 = _interopRequireDefault(_ilCo);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// Methods
-	var methodsList = [_cash2.default, _credit2.default, _com2.default];
+	var methodsList = [_cash2.default, _credit2.default, _com2.default, _ilCo2.default];
 	var methods = _lodash2.default.reduce(methodsList, function (methods, method) {
 	    methods[method.id] = method;return methods;
 	}, {});
@@ -17282,6 +17286,20 @@ var PaymentsMethods =
 
 /***/ }),
 /* 7 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = {
+	    id: 'il.co.mysodexo',
+	    countries: ['IL']
+	};
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17295,63 +17313,63 @@ var PaymentsMethods =
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _net = __webpack_require__(8);
+	var _net = __webpack_require__(9);
 
 	var _net2 = _interopRequireDefault(_net);
 
-	var _com = __webpack_require__(13);
+	var _com = __webpack_require__(14);
 
 	var _com2 = _interopRequireDefault(_com);
 
-	var _ilCo = __webpack_require__(14);
+	var _ilCo = __webpack_require__(15);
 
 	var _ilCo2 = _interopRequireDefault(_ilCo);
 
-	var _com3 = __webpack_require__(15);
+	var _com3 = __webpack_require__(16);
 
 	var _com4 = _interopRequireDefault(_com3);
 
-	var _auCom = __webpack_require__(16);
+	var _auCom = __webpack_require__(17);
 
 	var _auCom2 = _interopRequireDefault(_auCom);
 
-	var _com5 = __webpack_require__(17);
+	var _com5 = __webpack_require__(18);
 
 	var _com6 = _interopRequireDefault(_com5);
 
-	var _com7 = __webpack_require__(18);
+	var _com7 = __webpack_require__(19);
 
 	var _com8 = _interopRequireDefault(_com7);
 
-	var _com9 = __webpack_require__(19);
+	var _com9 = __webpack_require__(20);
 
 	var _com10 = _interopRequireDefault(_com9);
 
-	var _com11 = __webpack_require__(20);
+	var _com11 = __webpack_require__(21);
 
 	var _com12 = _interopRequireDefault(_com11);
 
-	var _com13 = __webpack_require__(21);
+	var _com13 = __webpack_require__(22);
 
 	var _com14 = _interopRequireDefault(_com13);
 
-	var _com15 = __webpack_require__(22);
+	var _com15 = __webpack_require__(23);
 
 	var _com16 = _interopRequireDefault(_com15);
 
-	var _com17 = __webpack_require__(23);
+	var _com17 = __webpack_require__(24);
 
 	var _com18 = _interopRequireDefault(_com17);
 
-	var _com19 = __webpack_require__(24);
+	var _com19 = __webpack_require__(25);
 
 	var _com20 = _interopRequireDefault(_com19);
 
-	var _com21 = __webpack_require__(25);
+	var _com21 = __webpack_require__(26);
 
 	var _com22 = _interopRequireDefault(_com21);
 
-	var _comWorldpay = __webpack_require__(26);
+	var _comWorldpay = __webpack_require__(27);
 
 	var _comWorldpay2 = _interopRequireDefault(_comWorldpay);
 
@@ -17384,7 +17402,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17393,11 +17411,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17420,16 +17438,16 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(10), __esModule: true };
-
-/***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var core = __webpack_require__(11);
+	module.exports = { "default": __webpack_require__(11), __esModule: true };
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var core = __webpack_require__(12);
 	var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
 	module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
 	  return $JSON.stringify.apply($JSON, arguments);
@@ -17437,7 +17455,7 @@ var PaymentsMethods =
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports) {
 
 	var core = module.exports = { version: '2.5.7' };
@@ -17445,7 +17463,7 @@ var PaymentsMethods =
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17497,7 +17515,7 @@ var PaymentsMethods =
 	/*******************************************/
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17506,11 +17524,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17533,7 +17551,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17542,11 +17560,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17568,7 +17586,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17577,11 +17595,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17606,7 +17624,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17615,11 +17633,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17641,7 +17659,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17650,11 +17668,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17677,7 +17695,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17686,11 +17704,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17712,7 +17730,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17721,11 +17739,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17747,7 +17765,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17756,11 +17774,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17782,7 +17800,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17791,11 +17809,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17819,7 +17837,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17828,11 +17846,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17855,7 +17873,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17864,11 +17882,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17890,7 +17908,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17899,11 +17917,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17926,7 +17944,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17935,11 +17953,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17961,7 +17979,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17970,11 +17988,11 @@ var PaymentsMethods =
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(9);
+	var _stringify = __webpack_require__(10);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _adapters = __webpack_require__(12);
+	var _adapters = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
