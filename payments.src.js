@@ -134,7 +134,7 @@ var PaymentsMethods =
 	  var undefined;
 
 	  /** Used as the semantic version number. */
-	  var VERSION = '4.17.14';
+	  var VERSION = '4.17.15';
 
 	  /** Used as the size to enable large array optimizations. */
 	  var LARGE_ARRAY_SIZE = 200;
