@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/wix/payments",
   "dependencies": {
-      "lodash": "^4.13.0"
+    "lodash": "^4.13.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",

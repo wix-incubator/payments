@@ -10,7 +10,6 @@ import mercurypay from './gateways/com.mercurypay';
 import paguelofacil from './gateways/com.paguelofacil';
 import paybox from './gateways/com.paybox';
 import paymentexpress from './gateways/com.paymentexpress';
-import paypal from './gateways/com.paypal';
 import pelecard from './gateways/com.pelecard';
 import stripe from './gateways/com.stripe';
 import tranzila from './gateways/com.tranzila';
@@ -29,7 +28,6 @@ const gatewaysList = [
     paguelofacil,
     paybox,
     paymentexpress,
-    paypal,
     pelecard,
     stripe,
     tranzila,
