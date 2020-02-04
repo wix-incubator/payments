@@ -17368,18 +17368,18 @@ var PaymentsMethods =
 
 	var _com18 = _interopRequireDefault(_com17);
 
-	var _com19 = __webpack_require__(25);
-
-	var _com20 = _interopRequireDefault(_com19);
-
-	var _comWorldpay = __webpack_require__(26);
+	var _comWorldpay = __webpack_require__(25);
 
 	var _comWorldpay2 = _interopRequireDefault(_comWorldpay);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// Gateways
-	var gatewaysList = [_net2.default, _com2.default, _ilCo2.default, _com4.default, _auCom2.default, _com6.default, _com8.default, _com10.default, _com12.default, _com14.default, _com16.default, _com18.default, _com20.default, _comWorldpay2.default];
+
+	// // import mercadopago from './gateways/com.mercadopago';
+	var gatewaysList = [_net2.default, _com2.default, _ilCo2.default, _com4.default, _auCom2.default,
+	// mercadopago,
+	_com6.default, _com8.default, _com10.default, _com12.default, _com14.default, _com16.default, _com18.default, _comWorldpay2.default];
 
 	var gateways = exports.gateways = _lodash2.default.reduce(gatewaysList, function (gateways, gateway) {
 	    gateways[gateway.id] = gateway;return gateways;
@@ -17680,42 +17680,6 @@ var PaymentsMethods =
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-	    id: 'com.mercadopago',
-
-	    form: [{ type: 'string', name: 'clientId' }, { type: 'string', name: 'clientSecret' }, { type: 'country', name: 'countryCode' }],
-
-	    // @see https://www.about-payments.com/knowledge-base/method/mercadopago#countries
-	    countries: ['AR', 'BR', 'CL', 'CO', 'MX', 'VE'],
-
-	    fields: ['holderName', 'holderId', 'csc'],
-
-	    formValuesToMerchant: _adapters.simpleFormValuesToMerchant,
-	    merchantToFormValues: _adapters.simpleMerchantToFormValues,
-	    keyToMerchant: JSON.parse,
-	    merchantToKey: _stringify2.default,
-
-	    ranking: 4
-	};
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _stringify = __webpack_require__(10);
-
-	var _stringify2 = _interopRequireDefault(_stringify);
-
-	var _adapters = __webpack_require__(13);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
 	    id: 'com.mercurypay',
 
 	    form: [{ type: 'string', name: 'merchantId' }, { type: 'string', name: 'password' }],
@@ -17733,7 +17697,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17768,7 +17732,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17803,7 +17767,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17840,7 +17804,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17875,7 +17839,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17911,7 +17875,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17946,7 +17910,7 @@ var PaymentsMethods =
 	};
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
