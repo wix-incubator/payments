@@ -5,7 +5,7 @@ import braintree from './gateways/com.braintreegateway';
 import creditguard from './gateways/il.co.creditguard';
 import eway from './gateways/com.ewaypayments';
 import fatzebra from './gateways/au.com.fatzebra';
-import mercadopago from './gateways/com.mercadopago';
+// // import mercadopago from './gateways/com.mercadopago';
 import mercurypay from './gateways/com.mercurypay';
 import paguelofacil from './gateways/com.paguelofacil';
 import paybox from './gateways/com.paybox';
@@ -23,7 +23,7 @@ const gatewaysList = [
     creditguard,
     eway,
     fatzebra,
-    mercadopago,
+    // mercadopago,
     mercurypay,
     paguelofacil,
     paybox,
