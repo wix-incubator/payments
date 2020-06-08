@@ -11,7 +11,7 @@ export default {
     countries : [
         'AT', 'AU', 'BE', 'BR', 'CA', 'CH', 'DE', 'DK', 'ES', 'FI',
         'FR', 'GB', 'HK', 'IE', 'IT', 'JP', 'LU', 'MX', 'NL', 'NO',
-        'NZ', 'PT', 'SE', 'SG', 'US'
+        'NZ', 'PT', 'SE', 'SG', 'US', 'PR'
     ],
 
     fields: [],
